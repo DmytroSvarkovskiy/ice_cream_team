@@ -1,0 +1,77 @@
+.contacts__list {
+  display: flex;
+
+  margin-bottom: 60px;
+  gap: 32px;
+}
+
+.contacts__item {
+  width: 368px;
+  height: 538px;
+
+  border: 1px solid #212121;
+
+  background: $text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__box {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__box-name {
+  display: flex;
+  width: 75.1px;
+  height: 28px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f0d1a5;
+  border-radius: 6px;
+
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+  }
+}
+
+.contacts__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.contacts__location-btn {
+  width: 198px;
+  height: 44px;
+
+  background: #d41342;
+  border-radius: 22px;
+  border: none;
+}
+
+.contacts__franchise-btn {
+  width: 168px;
+  height: 44px;
+
+  background: $text-color;
+  border-radius: 22px;
+  //   border: none;
+}
+
+.contacts__icon {
+  width: 4.43px;
+  height: 8px;
+
+  //   border: 2px solid #d41443;
+}
