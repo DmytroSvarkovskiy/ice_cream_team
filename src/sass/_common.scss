@@ -4,8 +4,11 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  @media screen and(min-width:320px) {
-    max-width: 320px;
+  @media screen and(min-width: 320px) {
+    width: 100%;
+  }
+  @media screen and(min-width: 480px) {
+    max-width: 480px;
   }
   @media screen and(min-width:768px) {
     max-width: 768px;
@@ -16,10 +19,8 @@
 }
 
 .section {
-  @media screen and(min-width:320px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .list {
