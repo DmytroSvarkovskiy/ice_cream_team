@@ -1,80 +1,227 @@
-.contacts__list {
-  display: flex;
+.contacts__section {
+  background: $background-color;
+  @include start {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
 
-  margin-bottom: 60px;
-  gap: 32px;
+.contacts__list {
+  @include start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 32px;
+    gap: 20px;
+  }
 }
 
 .contacts__item {
-  width: 368px;
-  height: 538px;
+  @include start {
+    width: 100%;
+    height: 100%;
 
-  border: 1px solid #212121;
-
-  background: $text-color;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
+    background: $text-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+  }
 }
 
 .contacts__box {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
+  @include start {
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
-.contacts__box-name {
-  display: flex;
-  width: 75.1px;
-  height: 28px;
+.contacts__box-cafe {
+  @include start {
+    display: flex;
+    width: 80px;
+    height: 16px;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  background: #f0d1a5;
-  border-radius: 6px;
+    background: #f0d1a5;
+    border-radius: 4px;
 
-  span {
+    font-size: 12px;
+    line-height: 1.8;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
     letter-spacing: 0.04em;
 
     color: $text-color;
+    margin-bottom: -4px;
+  }
+}
+
+.contacts__box-foodtruck {
+  @include start {
+    display: flex;
+    width: 130px;
+    height: 16px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #c2e297;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+    margin-bottom: -4px;
+  }
+}
+
+.contacts__box-location {
+  @include start {
+    max-width: 179px;
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+
+      color: #000000;
+
+      margin-bottom: 8px;
+    }
+    .contacts__box-text {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #907e82;
+    }
+  }
+}
+
+.contacts__box-line {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+}
+
+.box-timing__day {
+  @include start {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #000000;
+  }
+}
+
+.box-timing__time {
+  @include start {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #ffa5ba;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.contacts__link {
+  color: $secondary-text-color;
+
+  &:hover,
+  &:focus {
+    color: $title-text-color;
+  }
+  @include start {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
   }
 }
 
 .contacts__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 12px;
+  @include start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contacts__location-btn {
-  width: 198px;
-  height: 44px;
-
   background: #d41342;
   border-radius: 22px;
   border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: #ba012f;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  color: $text-color;
+
+  @include start {
+    display: block;
+    width: 161.45px;
+    height: 44px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+  }
+  .contacts__icon {
+    fill: $text-color;
+
+    @include start {
+      width: 6px;
+      height: 10px;
+
+      margin-left: 8px;
+    }
+  }
 }
 
 .contacts__franchise-btn {
-  width: 168px;
-  height: 44px;
-
   background: $text-color;
   border-radius: 22px;
-  //   border: none;
-}
+  border: none;
+  cursor: pointer;
 
-.contacts__icon {
-  width: 4.43px;
-  height: 8px;
-  // fill: #ffffff;
+  color: $title-text-color;
 
-  // fill: #d41443;
+  @include start {
+    display: block;
+    width: 161px;
+    height: 44px;
 
-  // border: 2px solid #d41443;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .contacts__icon {
+    fill: $title-text-color;
+
+    @include start {
+      width: 6.5px;
+      height: 10px;
+
+      margin-left: 13px;
+    }
+  }
 }
