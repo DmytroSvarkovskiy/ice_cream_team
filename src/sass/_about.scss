@@ -1,0 +1,174 @@
+.about {
+  position: relative;
+}
+
+.about__box {
+  display: block;
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
+
+// .about__section {
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: auto;
+//   background-image: url('../images/about/about-mob1x-milk.png');
+
+//   @media (min-device-pixel-ratio: 2),
+//     (-webkit-min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: url('../images/about/about-mob2x-milk.png');
+//   }
+//   @include tablet {
+//     background-image: none;
+//   }
+//   @include desktop {
+//     background-image: url('../images/about/about-desk1x-milk.png');
+
+//     @media (min-device-pixel-ratio: 2),
+//       (-webkit-min-device-pixel-ratio: 2),
+//       (min-resolution: 192dpi),
+//       (min-resolution: 2dppx) {
+//       background-image: url('../images/about/about-desk2x-milk.png');
+//     }
+//   }
+// }
+.about__inner {
+  display: flex;
+  width: 280px;
+  height: 279px;
+
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    width: 336px;
+    height: 335px;
+  }
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+  @include desktop {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about__pre-title {
+  font-family: 'Titan One';
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: $pre-title-color;
+  margin-bottom: 15px;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+}
+
+.about__title {
+  font-family: 'Titan One';
+  font-size: 34px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $title-text-color;
+  margin-bottom: 32px;
+
+  @include tablet {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+    margin-bottom: 60px;
+  }
+}
+
+.about__after-title {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #000000;
+  margin-bottom: 32px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+}
+.about__text {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: $secondary-text-color;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.92;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+}
+
+.about__open-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  cursor: pointer;
+  min-width: 176px;
+  height: 44px;
+  margin: 0 auto;
+
+  color: $title-text-color;
+  background-color: $text-color;
+  border-radius: 22px;
+  border-color: transparent;
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+  }
+}
