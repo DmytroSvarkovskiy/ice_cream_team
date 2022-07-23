@@ -185,69 +185,70 @@
 }
 .review-box {
     position: relative;
-    content: '';
-    display: flex;
-    margin-top: 16px;
-    margin-left: 144px;
-    width: 4px;
-    height: 4px;
-    background: #C7133E;
-    border-radius: 50%;
-    @include mobile {
-        position: relative;
-        content: '';
-        display: flex;
-        margin-top: 16px;
-        margin-left: 230px;
-        width: 4px;
-        height: 4px;
-        background: #C7133E;
-        border-radius: 50%;
-    }
-    @include tablet {
-        position: relative;
-        content: '';
-        display: flex;
-        margin-top: 4px;
-        margin-left: 382px;
-        width: 4px;
-        height: 4px;
-        background: #C7133E;
-        border-radius: 50%;
-    }
-    @include desktop {
-        position: relative;
-        content: '';
-        display: flex;
-        margin-top: 16px;
-        margin-left: 584px;
-        width: 4px;
-        height: 4px;
-        background: #C7133E;
-        border-radius: 50%;
-    }
+//     content: '';
+//     display: flex;
+//     margin-top: 16px;
+//     margin-left: 144px;
+//     width: 4px;
+//     height: 4px;
+//     background: #C7133E;
+//     border-radius: 50%;
+//     @include mobile {
+//         position: relative;
+//         content: '';
+//         display: flex;
+//         margin-top: 16px;
+//         margin-left: 230px;
+//         width: 4px;
+//         height: 4px;
+//         background: #C7133E;
+//         border-radius: 50%;
+    // }
+//     @include tablet {
+//         position: relative;
+//         content: '';
+//         display: flex;
+//         margin-top: 4px;
+//         margin-left: 382px;
+//         width: 4px;
+//         height: 4px;
+//         background: #C7133E;
+//         border-radius: 50%;
+//     }
+//     @include desktop {
+//         position: relative;
+//         content: '';
+//         display: flex;
+//         margin-top: 16px;
+//         margin-left: 584px;
+//         width: 4px;
+//         height: 4px;
+//         background: #C7133E;
+//         border-radius: 50%;
+//     }
 }
-.review-box::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    margin-left: -10px;
-    display: flex;
-    width: 4px;
-    height: 4px;
-    background: #C7133E;
-    border-radius: 50%;
-}
+// .review-box::before {
+//     position: absolute;
+//     content: '';
+//     top: 0;
+//     margin-left: -10px;
+//     display: flex;
+//     width: 4px;
+//     height: 4px;
+//     background: #C7133E;
+//     border-radius: 50%;
+// }
 .review-box::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    margin-left: 10px;
-    display: flex;
+    content: "";
     width: 4px;
     height: 4px;
-    background: #C7133E;
+    background-color: #C7133E;
     border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    box-shadow: 12px 0 #C7133E, -12px 0 #C7133E;
 }
 .customer {
     font-weight: 500;
