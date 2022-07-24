@@ -4,16 +4,7 @@
   background-image: linear-gradient(#fff5f6, #fff5f6);
   margin: 0 auto;
 
-  @include mobile {
-    max-width: 480px;
-  }
-
-  @include tablet {
-    max-width: 768px;
-  }
-
   @include desktop {
-    max-width: 1200px;
     padding-top: 100px;
   }
 }
@@ -102,6 +93,7 @@
   height: 32px;
   border-radius: 50%;
   background-color: $pre-title-color;
+  transition: background-color 250ms linear;
 }
 
 .social-link:hover,
@@ -110,7 +102,6 @@
 }
 
 .footer-contac-text {
-  font-family: 'DM Sans';
   font-weight: 700;
   font-size: 12px;
   line-height: 186%;
@@ -127,13 +118,12 @@
   border-top: 1px solid #e1e1e1;
 
   @include desktop {
-    width: 1167px;
+    padding: 0 16px;
     margin: 0 auto;
   }
 }
 
 .copyright-text {
-  font-family: 'DM Sans';
   font-weight: 700;
   font-size: 14px;
   line-height: 152%;
