@@ -191,6 +191,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
   @include desktop {
     margin: 60px auto;
   }
