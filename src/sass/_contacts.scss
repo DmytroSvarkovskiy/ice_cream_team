@@ -1,35 +1,56 @@
-.contacts {
-  position: relative;
+.contacts.section {
   background: $background-color;
-  background-position-y: 159px;
+  background: linear-gradient(
+    180deg,
+    $text-color 0%,
+    $text-color 23%,
+    $background-color 23%,
+    $background-color 100%
+  );
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    background: linear-gradient(
+      180deg,
+      $text-color 0%,
+      $text-color 49%,
+      $background-color 49%,
+      $background-color 100%
+    );
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background: linear-gradient(
+      180deg,
+      $text-color 0%,
+      $text-color 21%,
+      $background-color 21%,
+      $background-color 100%
+    );
+  }
 }
-
-// .contacts__section {
-//   padding-top: 30px;
-//   padding-bottom: 20px;
-
-//   @include mobile {
-//     padding-top: 30px;
-//     padding-bottom: 20px;
-//   }
-//   @include tablet {
-//     padding-top: 40px;
-//     padding-bottom: 20px;
-//   }
-//   @include desktop {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-//   }
-// }
 
 .contacts__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-bottom: 32px;
   gap: 20px;
 
   @include mobile {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
   @include tablet {
     flex-direction: row;
@@ -44,12 +65,26 @@
 }
 
 .contacts__item {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  width: 280px;
+  height: 412px;
 
   background: $text-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
+  @include mobile {
+    width: calc((100% - 32px) / 2);
+    height: 100%;
+  }
+  @include tablet {
+    width: 224px;
+    height: 528px;
+  }
+  @include desktop {
+    width: 368px;
+    height: 538px;
+  }
 }
 
 .contacts__box {
@@ -81,24 +116,24 @@
   background: #f0d1a5;
   border-radius: 4px;
 
-  @include font(500, 12px, 1.8, 00.04em);
+  @include font(500, 12px, 1.8, 0.04em);
 
   color: $text-color;
   margin-bottom: -4px;
 
   @include mobile {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     width: 73px;
     height: 28px;
   }
   @include tablet {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     margin-bottom: 0;
     width: 73px;
     height: 28px;
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     margin-bottom: 0;
     width: 75.1px;
     height: 28px;
@@ -116,24 +151,24 @@
   background: #c2e297;
   border-radius: 4px;
 
-  @include font(500, 12px, 1.8, 00.04em);
+  @include font(500, 12px, 1.8, 0.04em);
 
   color: $text-color;
   margin-bottom: -4px;
 
   @include mobile {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     width: 138px;
     height: 28px;
   }
   @include tablet {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     margin-bottom: 0;
     width: 138px;
     height: 28px;
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
     margin-bottom: 0;
     width: 138px;
     height: 28px;
@@ -155,33 +190,35 @@
 }
 
 .contacts__box-top-text {
-  @include font(500, 12px, 1.8, 00.04em);
-  color: #000000;
+  @include font(500, 12px, 1.8, 0.04em);
+  color: $secondary-text-color-dark;
   margin-bottom: 8px;
 
   @include mobile {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, 0.04em);
   }
   @include tablet {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, 0.04em);
+    margin-bottom: 12px;
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
+    margin-bottom: 8px;
   }
 }
 
 .contacts__box-text {
   @include font(500, 12px, 1.5, null);
-  color: #907e82;
+  color: $secondary-text-color;
 
   @include mobile {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include tablet {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
   }
 }
 
@@ -196,33 +233,39 @@
   color: #000000;
 
   @include mobile {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include tablet {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, 0.04em);
   }
 }
 
 .box-timing__time {
   @include font(500, 12px, 1.8, null);
 
-  color: #ffa5ba;
-
-  @include mobile {
-    @include font(500, 14px, 1.6, 00.04em);
-  }
-  @include tablet {
-    @include font(500, 14px, 1.6, 00.04em);
-  }
-  @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
-  }
+  color: $pre-title-color;
 
   &:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+  @include mobile {
+    @include font(500, 14px, 1.6, null);
+  }
+  @include tablet {
+    @include font(500, 14px, 1.6, null);
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  @include desktop {
+    @include font(500, 16px, 1.8, null);
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -237,13 +280,13 @@
   @include font(500, 12px, 1.5, null);
 
   @include mobile {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include tablet {
-    @include font(500, 14px, 1.6, 00.04em);
+    @include font(500, 14px, 1.6, null);
   }
   @include desktop {
-    @include font(500, 16px, 1.8, 00.04em);
+    @include font(500, 16px, 1.8, null);
   }
 }
 
@@ -347,11 +390,6 @@
 
   .contacts__icon {
     fill: none;
-
-    stroke: #646464;
-    stroke-width: 1px;
-    stroke-dasharray: 2, 2;
-    stroke-linejoin: round;
 
     width: 6px;
     height: 10px;
