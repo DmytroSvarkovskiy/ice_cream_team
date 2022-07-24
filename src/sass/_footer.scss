@@ -1,0 +1,141 @@
+.footer.section {
+  padding-top: 20px;
+  padding-bottom: 3px;
+  background-image: linear-gradient(#fff5f6, #fff5f6);
+  margin: 0 auto;
+
+  @include desktop {
+    padding-top: 100px;
+  }
+}
+
+.footer-container {
+  margin-bottom: 40px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-text {
+  font-family: 'Titan One';
+  font-size: 18px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: $pre-title-color;
+  margin-bottom: 16px;
+  max-width: 232px;
+  letter-spacing: 0.04em;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    max-width: 340px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+}
+
+.footer-title {
+  font-family: 'Titan One';
+  font-size: 34px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $title-text-color;
+  max-width: 200px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+    max-width: 340px;
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.13;
+    max-width: 100%;
+  }
+}
+
+.social-list {
+  display: flex;
+  justify-content: end;
+  gap: 28px;
+  list-style: none;
+  margin-bottom: 40px;
+
+  @include tablet {
+    padding-top: 67px;
+  }
+
+  @include desktop {
+    padding-top: 12px;
+  }
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $pre-title-color;
+  transition: background-color 250ms linear;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: $title-text-color;
+}
+
+.footer-contac-text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 186%;
+  text-align: right;
+  color: $secondary-text-color-dark;
+}
+
+.footer-contac-link {
+  text-decoration: none;
+  color: $title-text-color;
+}
+
+.copyright-container {
+  border-top: 1px solid #e1e1e1;
+
+  @include desktop {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}
+
+.copyright-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 152%;
+  color: #907e82;
+  padding-top: 16px;
+  margin: 0 auto;
+  max-width: 140px;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    max-width: 100%;
+  }
+}
