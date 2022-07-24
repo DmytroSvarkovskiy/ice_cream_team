@@ -1,0 +1,247 @@
+.products-lable {
+  margin-bottom: 15px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $pre-title-color;
+  @include tablet {
+    margin-bottom: 18px;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.products-title {
+  margin-bottom: 148px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $title-text-color;
+  @include tablet {
+    margin-bottom: 158px;
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @include desktop {
+    margin-bottom: 281px;
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+
+.products-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $pre-title-color;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+  @include start {
+    width: 280px;
+  }
+  @include mobile {
+    width: 209px;
+  }
+  @include tablet {
+    width: 224px;
+  }
+  @include desktop {
+    width: 368px;
+  }
+}
+
+.products-list {
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include tablet {
+    display: flex;
+  }
+}
+
+.products-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media screen and(max-width:479px) {
+    &:not(:last-child) {
+      margin-bottom: 140px;
+    }
+  }
+  @include mobile {
+    &:first-child {
+      margin-right: 16px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      &:first-child {
+        margin-bottom: 140px;
+      }
+    }
+
+    @include tablet {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+      @include desktop {
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+
+.products-subtitle {
+  position: relative;
+  padding-top: 160px;
+  margin-bottom: 70px;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  @include mobile {
+    padding-top: 118px;
+  }
+  @include desktop {
+    padding-top: 165px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.products-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 12px 0 #ffffff, -12px 0 #ffffff;
+}
+
+.products-content::before {
+  content: url(/src/images/products-icecream-mobile-min.png);
+  position: absolute;
+  top: -140px;
+  left: 0;
+  @include mobile {
+    content: url(/src/images/products-icecream-tablet-min.png);
+    position: absolute;
+    top: -138px;
+  }
+  @include tablet {
+    content: url(/src/images/products-icecream-tablet-min.png);
+    position: absolute;
+    top: -138px;
+  }
+  @include desktop {
+    content: url(/src/images/products-icecream-desktop-min.png);
+    position: absolute;
+    top: -261px;
+  }
+}
+
+.products-text {
+  padding: 0 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  @include tablet {
+    padding: 0 32px;
+    line-height: 1.79;
+  }
+  @include desktop {
+    padding: 0 64px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+.products-btn {
+  margin: 32px auto 40px;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include desktop {
+    margin: 60px auto;
+  }
+}
+
+.products-icecoffee {
+  background: #f0d1a5;
+  &::before {
+    content: url(/src/images/products-icecoffee-mobile-min.png);
+    position: absolute;
+    top: -140px;
+    left: 0;
+    @include mobile {
+      content: url(/src/images/products-icecoffee-tablet-min.png);
+      position: absolute;
+      top: -138px;
+    }
+    @include tablet {
+      content: url(/src/images/products-icecoffee-tablet-min.png);
+      position: absolute;
+      top: -138px;
+    }
+    @include desktop {
+      content: url(/src/images/products-icecoffee-desktop-min.png);
+      position: absolute;
+      top: -261px;
+    }
+  }
+}
+
+.products-milkshakes {
+  background: #c2e297;
+  &::before {
+    content: url(/src/images/products-milkshakes-mobile-min.png);
+    position: absolute;
+    top: -140px;
+    left: 0;
+    @include mobile {
+      content: url(/src/images/products-milkshakes-tablet-min.png);
+      position: absolute;
+      top: -138px;
+    }
+    @include tablet {
+      content: url(/src/images/products-milkshakes-tablet-min.png);
+      position: absolute;
+      top: -138px;
+    }
+    @include desktop {
+      content: url(/src/images/products-milkshakes-desktop-min.png);
+      position: absolute;
+      top: -261px;
+    }
+  }
+}
