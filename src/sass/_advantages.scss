@@ -1,0 +1,93 @@
+ .advantages-list {
+padding-right: 50px;
+margin-top: 39px;
+
+@include tablet {
+    padding-right: 0px;
+    display: flex;
+    margin-top: 66px;
+    
+  }
+  @include desktop {
+    margin-top: 39px;
+    
+  }
+ }
+
+ .advantages-list__item {
+    padding-top: 66px;
+    @media screen and (max-width: 767px) {
+      height: 156px;
+    }
+    @include tablet {
+      width: 180px;
+      padding-top: 86px;
+    }
+    @include desktop {
+      width: 330px;
+      padding-top: 90px;
+    }
+  }
+
+  .advantages-list__icon {
+    margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 36px;
+        
+      }
+      @include desktop {
+        margin-bottom: 40px;
+        
+      }
+  }
+
+
+  .advantages-list__item {
+    margin-bottom: 38px;
+    @include tablet {
+      margin-bottom: 0px;
+      margin-right: 60px;
+    }
+    @include desktop {
+      margin-right: 30px;
+    }
+  }
+  
+ 
+  .advantages-list__title {
+  color: $title-text-color;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  display: block;
+  margin-bottom: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 48px;
+  }
+  @include desktop {
+    font-size: 58px;
+  }
+}
+  
+.advantages-list__text {
+     color: #000000;;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+
+     @include tablet {
+        font-size: 14px;
+        line-height: 1.71;
+      }
+      @include desktop {
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 0.02em;
+      }
+    }
