@@ -1,25 +1,26 @@
-.contacts__section.contacts__bg {
+.contacts {
   position: relative;
   background: $background-color;
+  background-position-y: 159px;
 }
 
-.contacts__section {
-  padding-top: 30px;
-  padding-bottom: 20px;
+// .contacts__section {
+//   padding-top: 30px;
+//   padding-bottom: 20px;
 
-  @include mobile {
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-  @include tablet {
-    padding-top: 40px;
-    padding-bottom: 20px;
-  }
-  @include desktop {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
+//   @include mobile {
+//     padding-top: 30px;
+//     padding-bottom: 20px;
+//   }
+//   @include tablet {
+//     padding-top: 40px;
+//     padding-bottom: 20px;
+//   }
+//   @include desktop {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+//   }
+// }
 
 .contacts__list {
   display: flex;
