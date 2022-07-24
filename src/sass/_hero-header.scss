@@ -1,4 +1,18 @@
+.header {
+  background: #ffb8ca;
+  position: relative;
+  height: 520px;
+  .container {
+    height: 100%;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .header-top {
+  margin-bottom: 136px;
+
   display: flex;
   align-items: center;
 }
@@ -6,6 +20,187 @@
   display: flex;
   align-items: center;
 }
-.header-nav__list {
+
+.menu-open-btn {
+  margin-left: auto;
+  padding: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+}
+
+.header-nav__list {
+  display: none;
+}
+
+.header-top__btn {
+  display: none;
+}
+
+.header__ellipse {
+  position: absolute;
+  top: 83px;
+  left: 36px;
+  width: 346px;
+  height: 346px;
+  border-radius: 50%;
+  border: transparent;
+  background: $pre-title-color;
+}
+
+.header__icecream {
+  position: absolute;
+  bottom: 0;
+  left: 117px;
+}
+
+.header-mob-content {
+  position: absolute;
+}
+
+.header-title {
+  width: 218px;
+  margin-bottom: 20px;
+}
+
+.header-title__text1 {
+  font-family: 'Titan One';
+  font-style: normal;
+  @include font(400, 26px, 1.15, 0.04em);
+  text-transform: uppercase;
+  color: $text-color;
+}
+.header-title__text2 {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.96;
+  text-transform: uppercase;
+  color: $title-text-color;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn-products {
+  margin-right: 8px;
+  width: 62.4px;
+  height: 24px;
+  background: $title-text-color;
+  border-radius: 20px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $text-color;
+}
+.header-btn-made {
+  width: 82.8px;
+  height: 24px;
+  background: $text-color;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $title-text-color;
+}
+.header-groups {
+  display: none;
+}
+.header__milk {
+  display: none;
+}
+.header-text {
+  display: none;
+}
+.header-btn-arrow {
+  display: none;
+}
+.header__girl {
+  display: none;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 70px;
+  background: #e17992;
+  width: 250px;
+  height: 100vh;
+  padding: 60px 0;
+}
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+}
+
+.mob-top__btn {
+  margin: 0 auto 19px;
+  width: 209px;
+  height: 44px;
+  background: $text-color;
+  border-radius: 22px;
+  border: transparent;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $title-text-color;
+}
+
+.mob-top-icon {
+  margin-left: 15.77px;
+  display: flex;
+  align-items: center;
+}
+
+.mob-nav__link {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  width: 250px;
+  height: 42px;
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+  padding: 0 20px;
+}
+
+.current {
+  color: $title-text-color;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
