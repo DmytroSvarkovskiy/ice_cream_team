@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice cream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ice cream</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <!-- Александр Турлаков -->
+    <include src="./partials/hero-header.html"></include>
 
-  <link rel="stylesheet" href="./sass/main.scss" />
-  <script type="module" src="./index.js"></script>
-</head>
+    <!-- Baramykin Oleh -->
+    <include src="./partials/products.html"></include>
 
-<body>
-  <!-- Александр Турлаков -->
-  <include src="./partials/hero-header.html"></include>
+    <!-- Tanya Gryanko -->
+    <include src="./partials/about.html"></include>
 
-  <!-- Baramykin Oleh -->
-  <include src="./partials/products.html"></include>
+    <!-- Андрей Демьянюк -->
+    <include src="./partials/advantages.html"></include>
 
-  <!-- Tanya Gryanko -->
-  <include src="./partials/about.html"></include>
+    <!-- Oleksiy Komarnitskyi -->
+    <include src="./partials/gallery.html"></include>
 
-  <!-- Андрей Демьянюк -->
-  <include src="./partials/advantages.html"></include>
+    <!-- Олеся -->
+    <include src="./partials/customer-reviews.html"></include>
 
-  <!-- Oleksiy Komarnitskyi -->
-  <include src="./partials/gallery.html"></include>
+    <!-- Aleksey Gamanovich -->
+    <include src="./partials/contacts.html"></include>
 
-  <!-- Олеся -->
-  <include src="./partials/customer-reviews.html"></include>
-
-  <!-- Aleksey Gamanovich -->
-  <include src="./partials/contacts.html"></include>
-
-  <!-- Олександр -->
-  <include src="./partials/footer.html"></include>
-</body>
-
+    <!-- Олександр -->
+    <include src="./partials/footer.html"></include>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
