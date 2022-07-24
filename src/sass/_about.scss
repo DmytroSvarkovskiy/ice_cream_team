@@ -1,14 +1,10 @@
 .about {
-  position: relative;
-}
-
-.about__box {
-  display: block;
+  background-color: $background-color;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   background-image: url('../images/about/about-mob1x-milk.png');
-
+  background-size: 320px;
+  background-position: top 590px left 0;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -19,15 +15,12 @@
     background-image: none;
   }
   @include tablet {
-    display: flex;
-    align-items: center;
     background-image: none;
   }
   @include desktop {
-    display: flex;
-    align-items: center;
     background-image: url('../images/about/about-desk1x-milk.png');
-
+    background-size: 1200px;
+    background-position: top 236px left 0px;
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -37,28 +30,15 @@
   }
 }
 
-.about__section {
-  background-color: $background-color;
-}
-
-.about__picture {
-  display: flex;
-  width: 280px;
-  margin-bottom: 40px;
-  @include mobile {
-    width: 310px;
-    margin-bottom: 45px;
-  }
-
+.about__box {
+  display: block;
   @include tablet {
-    width: 336px;
-    margin-right: 32px;
-    margin-left: 32px;
+    display: flex;
+    align-items: flex-end;
   }
   @include desktop {
-    width: 501px;
-    margin-right: 99px;
-    margin-left: 16px;
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -114,11 +94,32 @@
   }
 }
 
+.about__picture {
+  display: flex;
+  width: 280px;
+  margin-bottom: 40px;
+  @include mobile {
+    width: 310px;
+    margin-bottom: 45px;
+  }
+
+  @include tablet {
+    width: 336px;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+  @include desktop {
+    width: 501px;
+    margin-right: 99px;
+    margin-left: 16px;
+  }
+}
+
 .about__after-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.58;
-  color: #000000;
+  color: $secondary-text-color-dark;
   margin-bottom: 26px;
   max-width: 220px;
   @include mobile {
@@ -141,6 +142,7 @@
     max-width: 463px;
   }
 }
+
 .about__text {
   font-weight: 500;
   font-size: 12px;
