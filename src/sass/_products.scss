@@ -1,7 +1,6 @@
 .products-lable {
   margin-bottom: 15px;
   font-family: 'Titan One';
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.17;
@@ -23,7 +22,6 @@
 .products-title {
   margin-bottom: 148px;
   font-family: 'Titan One';
-  font-style: normal;
   font-weight: 400;
   font-size: 34px;
   line-height: 1.15;
@@ -49,6 +47,11 @@
   height: auto;
   background-color: $pre-title-color;
   border-radius: 24px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
   @include start {
     width: 280px;
   }
@@ -107,9 +110,10 @@
 }
 
 .products-subtitle {
+  position: relative;
   padding-top: 160px;
+  margin-bottom: 70px;
   font-family: 'Titan One';
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.15;
@@ -125,6 +129,19 @@
     font-size: 30px;
     line-height: 1.13;
   }
+}
+
+.products-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 12px 0 #ffffff, -12px 0 #ffffff;
 }
 
 .products-content::before {
@@ -151,8 +168,6 @@
 
 .products-text {
   padding: 0 40px;
-  font-family: 'DM Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
@@ -228,35 +243,5 @@
       position: absolute;
       top: -261px;
     }
-  }
-}
-
-.products-box {
-  position: relative;
-  content: '';
-  margin: 32px auto;
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  border-radius: 50%;
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    margin-left: -10px;
-    width: 6px;
-    height: 6px;
-    background: #ffffff;
-    border-radius: 50%;
-  }
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    margin-left: 10px;
-    width: 6px;
-    height: 6px;
-    background: #ffffff;
-    border-radius: 50%;
   }
 }
