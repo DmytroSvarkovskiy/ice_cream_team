@@ -74,20 +74,20 @@
   position: relative;
   min-width: 157px;
 
-  background-image: -webkit-repeating-linear-gradient(
-    top,
-    transparent 0px,
-    transparent 29px,
-    #e1e1e1 29px,
-    transparent 30px
-  );
-  // background-image: repeating-linear-gradient(
+  // background-image: -webkit-repeating-linear-gradient(
   //   top,
   //   transparent 0px,
   //   transparent 29px,
   //   #e1e1e1 29px,
   //   transparent 30px
   // );
+  background-image: repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 29px,
+    #e1e1e1 29px,
+    transparent 30px
+  );
   @include mobile {
     @include font(700, 14px, 2.14, 0.04em);
 
