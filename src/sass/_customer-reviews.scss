@@ -12,8 +12,6 @@
 }
 .review-content {
   padding: 43px 58px 26px 65px;
-  margin: 0 auto;
-
   position: relative;
   margin-bottom: 32px;
   min-width: 280;
@@ -44,9 +42,15 @@
   border-radius: 50%;
   display: block;
   position: absolute;
-  bottom: -20px;
+  bottom: -14px;
   left: 50%;
   box-shadow: 12px 0 #c7133e, -12px 0 #c7133e;
+  @include tablet {
+    bottom: -8px;
+  }
+  @include desktop {
+    bottom: -14px;
+  }
 }
 
 .review-img {
@@ -64,7 +68,7 @@
 }
 
 .customer-review-text {
-  @include font(500, 12px, 2.55, null);
+  @include font(700, 12px, 2.55, 0.02em);
   text-align: center;
   color: #000000;
   position: relative;
@@ -77,15 +81,15 @@
     #e1e1e1 29px,
     transparent 30px
   );
-  background-image: repeating-linear-gradient(
-    top,
-    transparent 0px,
-    transparent 29px,
-    #e1e1e1 29px,
-    transparent 30px
-  );
+  // background-image: repeating-linear-gradient(
+  //   top,
+  //   transparent 0px,
+  //   transparent 29px,
+  //   #e1e1e1 29px,
+  //   transparent 30px
+  // );
   @include mobile {
-    @include font(500, 14px, 2.14, 0.04em);
+    @include font(700, 14px, 2.14, 0.04em);
 
     z-index: 2;
     top: 37px;
@@ -93,7 +97,7 @@
     width: 330px;
   }
   @include tablet {
-    @include font(500, 14px, 2.16, 0.04em);
+    @include font(700, 14px, 2.16, 0.02em);
     left: 51px;
     width: 514px;
     top: 37px;
@@ -128,12 +132,12 @@
 }
 
 .customer {
-  @include font(500, 14px, 1.86, null);
+  @include font(700, 14px, 1.86, null);
   text-align: center;
   @include tablet {
-    @include font(500, 16px, 1.86, null);
+    @include font(null, 16px, 1.86, null);
   }
   @include tablet {
-    @include font(500, 20px, 1.86, null);
+    @include font(null, 20px, 1.86, null);
   }
 }
