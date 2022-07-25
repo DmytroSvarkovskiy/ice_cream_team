@@ -45,50 +45,51 @@
         margin-bottom: 16px;
     }
 }
+// .review-text {
+//     position: relative;
+//     z-index: 2;
+//     top: 10px;
+//     left: 65px;
+//     max-width: 157px;
+//     @include mobile {
+//         position: relative;
+//         z-index: 2;
+//         top: 10px;
+//         left: 65px;
+//         max-width: 330px;
+//     }
+//     @include tablet {
+//         position: relative;
+//         z-index: 2;
+//         top: 10px;
+//         left: 51px;
+//         max-width: 514px;
+//     }
+//     @include desktop {
+//         position: relative;
+//         z-index: 2;
+//         top: 10px;
+//         left: 109px;
+//         max-width: 750px;
+//     }
+// }
 .review-text {
-    position: relative;
-    z-index: 2;
-    top: 10px;
-    left: 65px;
-    max-width: 157px;
-    @include mobile {
-        position: relative;
-        z-index: 2;
-        top: 10px;
-        left: 65px;
-        max-width: 330px;
-    }
-    @include tablet {
-        position: relative;
-        z-index: 2;
-        top: 10px;
-        left: 51px;
-        max-width: 514px;
-    }
-    @include desktop {
-        position: relative;
-        z-index: 2;
-        top: 10px;
-        left: 109px;
-        max-width: 750px;
-    }
-}
-.text {
     font-weight: 500;
     font-size: 12px;
     line-height: 2.58;
     text-align: center;
     color: #000000;
 
+    position: relative;
+    z-index: 2;
+    top: 10px;
+    left: 65px;
     max-width: 157px;
 
     display: inline-flex;
         text-align: center;
     
         background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
-        // background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-        // background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-        // background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
         background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
     @include mobile {
         font-weight: 500;
@@ -98,15 +99,16 @@
         letter-spacing: 0.04em;
         color: #000000;
 
-        max-width: 100%;
+        position: relative;
+        z-index: 2;
+        top: 10px;
+        left: 65px;
+        max-width: 330px;
 
         display: inline-flex;
             text-align: center;
         
             background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
-            // background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-            // background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-            // background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
             background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
     }
     @include tablet {
@@ -117,15 +119,16 @@
         letter-spacing: 0.04em;
         color: #000000;
         
-        max-width: 100%;
+        position: relative;
+        z-index: 2;
+        top: 10px;
+        left: 51px;
+        max-width: 514px;
         
         display: inline-flex;
         text-align: center;
         
         background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
-        // background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-        // background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-        // background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
         background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
     }
     @include desktop {
@@ -136,28 +139,26 @@
         letter-spacing: 0.04em;
         color: #000000;
 
+        position: relative;
+        z-index: 2;
+        top: 10px;
+        left: 109px;
         max-width: 750px;
-            // max-height: 52px;
-        
-            // margin-left: 109px;
         
         display: inline-flex;
         text-align: center;
         
         background-image: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
-            // background-image: -moz-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-            // background-image: -ms-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
-            // background-image: -o-repeating-linear-gradient(top, transparent 0px, transparent 19px, #E1E1E1 19px, transparent 20px);
         background-image: repeating-linear-gradient(top, transparent 0px, transparent 29px, #E1E1E1 29px, transparent 30px);
     }
     
 }
 .review-icon {
-    z-index: 1;
+
     position: relative;
     top: 30px;
     left: 53px;
-    margin-right: 0;
+
     @include mobile {
         z-index: 1;
         position: relative;
@@ -179,8 +180,7 @@
         position: relative;
         top: 32px;
         left: 72px;
-         // padding-top: 32px;
-        // padding-left: 72px;
+
     }
 }
 .review-box {
