@@ -1,0 +1,219 @@
+.about {
+  background-color: $background-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/about/about-mob1x-milk.png');
+  background-size: 320px;
+  background-position: top 590px left 0;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/about/about-mob2x-milk.png');
+  }
+  @include mobile {
+    background-image: none;
+  }
+  @include tablet {
+    background-image: none;
+  }
+  @include desktop {
+    background-image: url('../images/about/about-desk1x-milk.png');
+    background-size: 1200px;
+    background-position: top 236px left 0px;
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/about/about-desk2x-milk.png');
+    }
+  }
+}
+
+.about__box {
+  display: block;
+  @include tablet {
+    display: flex;
+    align-items: flex-end;
+  }
+  @include desktop {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.about__pre-title {
+  font-family: 'Titan One';
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: $pre-title-color;
+  margin-bottom: 15px;
+  @include mobile {
+    font-size: 20px;
+    line-height: 1.16;
+  }
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+}
+
+.about__title {
+  font-family: 'Titan One';
+  font-size: 34px;
+  line-height: 1.14;
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $title-text-color;
+  margin-bottom: 32px;
+  @include mobile {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+  @include tablet {
+    font-size: 48px;
+    font-size: 34px;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+    margin-bottom: 60px;
+  }
+}
+
+.about__picture {
+  display: flex;
+  width: 280px;
+  margin-bottom: 40px;
+  @include mobile {
+    width: 310px;
+    margin-bottom: 45px;
+  }
+
+  @include tablet {
+    width: 336px;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+  @include desktop {
+    width: 501px;
+    margin-right: 99px;
+    margin-left: 16px;
+  }
+}
+
+.about__after-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: $secondary-text-color-dark;
+  margin-bottom: 26px;
+  max-width: 220px;
+  @include mobile {
+    font-size: 13px;
+    line-height: 1.68;
+    margin-bottom: 26px;
+    max-width: 334px;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+    margin-bottom: 23px;
+    max-width: 334px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    max-width: 463px;
+  }
+}
+
+.about__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: $secondary-text-color;
+  margin-bottom: 20px;
+  max-width: 220px;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 1.68;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+    max-width: 334px;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+    max-width: 334px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.92;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+    max-width: 463px;
+  }
+}
+
+.about__open-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  cursor: pointer;
+  min-width: 176px;
+  height: 44px;
+
+  color: $title-text-color;
+  background-color: $text-color;
+  border-radius: 22px;
+  border-color: transparent;
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @include mobile {
+    font-size: 15px;
+    line-height: 1.3px;
+  }
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.31px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.31px;
+    margin-bottom: 81px;
+  }
+}
+
+.about__open-icon {
+  width: 6.5px;
+  height: 10px;
+  margin-left: 14px;
+}
