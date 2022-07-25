@@ -85,7 +85,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: $text-color;
   &:hover,
   &:focus {
@@ -110,6 +110,7 @@
     margin-left: auto;
     cursor: pointer;
     z-index: 2;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
       background: $btn-hover-color;
@@ -209,12 +210,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: $text-color;
   &:hover,
   &:focus {
-    background: $btn-hover-color;
-    color: $title-text-color;
+    background: #ba012f;
   }
   @include desktop {
     margin-right: 12px;
@@ -235,6 +235,7 @@
   justify-content: center;
   @include font(400, 8px, 1.25, null);
   color: $title-text-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background: $btn-hover-color;
@@ -305,7 +306,6 @@
 }
 
 .header-groups__word {
-  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 8px;
@@ -344,7 +344,6 @@
   @include tablet {
     display: block;
     width: 114px;
-    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 8px;
@@ -462,6 +461,7 @@
   border-top: 1px solid #e18298;
   border-bottom: 1px solid #e18298;
   padding: 0 20px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: $title-text-color;
