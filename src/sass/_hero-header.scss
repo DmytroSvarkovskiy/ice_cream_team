@@ -1,11 +1,667 @@
+.header {
+  background: #ffb8ca;
+  position: relative;
+  height: 520px;
+  @include tablet {
+    height: 416px;
+  }
+  @include desktop {
+    height: 664px;
+  }
+  .container {
+    height: 100%;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include mobile {
+      padding-top: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    @include tablet {
+      padding-top: 32px;
+      padding-left: 32px;
+      padding-right: 32px;
+      position: relative;
+    }
+    @include desktop {
+      padding-top: 37px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
 .header-top {
+  margin-bottom: 136px;
   display: flex;
   align-items: center;
+  @include mobile {
+    margin-bottom: 50px;
+  }
+  @include tablet {
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 .header-nav {
   display: flex;
   align-items: center;
 }
-.header-nav__list {
+
+.menu-open-btn {
+  margin-left: auto;
+  padding: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  @include tablet {
+    margin-left: 293px;
+    z-index: 2;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.header-nav__list {
+  display: none;
+  @include desktop {
+    display: flex;
+    margin-left: 128px;
+    z-index: 2;
+  }
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.header-nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: $text-color;
+  &:hover,
+  &:focus {
+    color: $title-text-color;
+  }
+}
+
+.header-top__btn {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 160px;
+    height: 44px;
+    background: $text-color;
+    border-radius: 22px;
+    border: transparent;
+    @include font(700, 16px, 1.31, null);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $title-text-color;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 2;
+    &:hover,
+    &:focus {
+      background: $btn-hover-color;
+    }
+  }
+}
+
+.header__ellipse {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  @include tablet {
+    top: 43px;
+    left: 32%;
+  }
+  @include desktop {
+    top: 54px;
+    left: 43%;
+  }
+}
+
+.header__icecream {
+  position: absolute;
+  bottom: 0;
+  right: 32px;
+  @include mobile {
+    right: 100px;
+  }
+  @include tablet {
+    left: 42%;
+  }
+  @include desktop {
+    left: 53%;
+  }
+}
+
+.header-mob-content {
+  position: absolute;
+}
+
+.header-title {
+  width: 218px;
+  margin-bottom: 20px;
+  @include tablet {
+    width: 162px;
+  }
+  @include desktop {
+    width: 277px;
+    margin-bottom: 24px;
+  }
+}
+
+.header-title__pretitle {
+  font-family: 'Titan One';
+  font-style: normal;
+  @include font(400, 26px, 1.15, 0.04em);
+  text-transform: uppercase;
+  color: $text-color;
+  @include tablet {
+    @include font(null, 22px, 1.14, null);
+  }
+  @include desktop {
+    @include font(null, 38px, 1.16, null);
+  }
+}
+.header-title__posttitle {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.96;
+  text-transform: uppercase;
+  color: $title-text-color;
+  @include tablet {
+    font-size: 34px;
+    line-height: 0.91;
+    letter-spacing: 0.04em;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 0.9;
+  }
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn-products {
+  margin-right: 8px;
+  width: 62.4px;
+  height: 24px;
+  background: $title-text-color;
+  border-radius: 20px;
+  @include font(400, 8px, 1.25, null);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $text-color;
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+    color: $title-text-color;
+  }
+  @include desktop {
+    margin-right: 12px;
+    width: 107px;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: 1.23;
+  }
+}
+.header-btn-made {
+  width: 82.8px;
+  height: 24px;
+  background: $text-color;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(400, 8px, 1.25, null);
+  color: $title-text-color;
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+  }
+  @include desktop {
+    width: 138px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.23;
+  }
+}
+.header-groups {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.header-groups__cafes {
+  position: relative;
+  margin-bottom: 16px;
+  @include desktop {
+    margin-bottom: 15px;
+  }
+}
+
+.header-groups__trucks {
+  position: relative;
+}
+
+.header-groups__ellipse {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.header-groups__numder {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+
+  text-align: right;
+  text-transform: uppercase;
+
+  color: $title-text-color;
+  padding-top: 2px;
+  padding-right: 8px;
+  position: relative;
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.15;
+    padding-top: 4px;
+    padding-right: 18px;
+  }
+}
+
+.header-groups__word {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+
+  color: $text-color;
+  padding-right: 8px;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+    padding-right: 18px;
+  }
+}
+
+.header__milk {
+  display: none;
+  @include mobile {
+    display: block;
+    position: relative;
+    top: 200px;
+    left: 0;
+  }
+  @include tablet {
+    position: absolute;
+    left: 32px;
+    top: 246px;
+  }
+  @include desktop {
+    left: 15px;
+    top: 388px;
+  }
+}
+.header-text {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 114px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+
+    color: $text-color;
+    position: absolute;
+    top: 287px;
+    left: 184;
+  }
+  @include desktop {
+    width: 200px;
+    top: 456px;
+    left: 228px;
+
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+.header-btn-arrow {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    top: 342px;
+    left: 184;
+    border: transparent;
+    background: transparent;
+  }
+  @include desktop {
+    top: 554px;
+    left: 228px;
+  }
+}
+.header__girl {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+  }
+  @include desktop {
+    right: 15px;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #e17992;
+  width: 250px;
+  height: 100vh;
+  padding: 60px 0;
+  transform: translateX(0);
+  transition: opacity 350ms linear, visibility 350ms linear,
+    transform 350ms linear;
+  &.is-hidden {
+    transform: translateX(100%);
+    transition: transform 350ms linear;
+  }
+  @include tablet {
+    width: 254px;
+    padding: 58px 0;
+    z-index: 2;
+  }
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  @include tablet {
+    right: 32px;
+  }
+}
+
+.mob-top__btn {
+  margin: 0 auto 19px;
+  width: 209px;
+  height: 44px;
+  background: $text-color;
+  border-radius: 22px;
+  border: transparent;
+  @include font(700, 16px, 1.31, null);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $title-text-color;
+  @include tablet {
+    width: 186px;
+  }
+}
+
+.mob-top-icon {
+  margin-left: 15.77px;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    margin-left: 14.04px;
+  }
+}
+
+.mob-nav__link {
+  @include font(700, 14px, 1.29, null);
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  width: 250px;
+  height: 42px;
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+  padding: 0 20px;
+  &:hover,
+  &:focus {
+    color: $title-text-color;
+  }
+  @include tablet {
+    width: 254px;
+  }
+}
+
+.current {
+  color: $title-text-color;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// ----- modal -----//
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 350ms linear, visibility 350ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: 100%;
+  padding: 20px;
+  transform: translate(-50%, 0) scale(1);
+  background-color: $pre-title-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 350ms linear;
+  width: 300px;
+  height: 400px;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  // @include mobile {
+  //   width: 300px;
+  //   height: 400px;
+  // }
+  @include tablet {
+    width: 600px;
+    height: 400px;
+  }
+  @include desktop {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+.data-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: $text-color;
+}
+
+.button-icon {
+  transition: fill 250ms linear;
+  .data-modal-close:hover &,
+  .data-modal-close:focus & {
+    fill: $title-text-color;
+  }
+}
+
+.modal-title {
+  text-align: center;
+  @include font(400, 20px, 1.5, 0.03em);
+  color: $text-color;
+  margin-bottom: 8px;
+  @include desktop {
+    @include font(null, null, 1.15, null);
+  }
+}
+
+.modal-icon {
+  margin-bottom: 10px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+  @include font(null, 12px, 1.17, 0.01em);
+  color: $text-color;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 42px;
+  outline: transparent;
+  transition: border-color 250ms linear;
+  &:hover,
+  &:focus {
+    border-color: $title-text-color;
+  }
+}
+
+.modal-input-icon {
+  position: relative;
+}
+
+.input-icon {
+  fill: $text-color;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms linear;
+  .modal-input:hover + &,
+  .modal-input:focus + & {
+    fill: $title-text-color;
+  }
+  &:hover,
+  &:focus {
+    fill: $title-text-color;
+  }
+}
+
+.modal-textarea {
+  margin-bottom: 10px;
+}
+
+.modal-area {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  resize: none;
+  padding: 12px 16px;
+  outline: transparent;
+  transition: border-color 250ms linear;
+  &:hover,
+  &:focus {
+    border-color: $title-text-color;
+  }
+  &::placeholder {
+    color: rgba(59, 59, 59, 0.5);
+  }
+}
+
+.modal-btn {
+  margin: 0 auto;
+  width: 160px;
+  height: 44px;
+  cursor: pointer;
+  border: transparent;
+  background: $text-color;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(700, 14px, 1.31, null);
+
+  color: $title-text-color;
+  @include desktop {
+    width: 138px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 1.23;
+  }
+
+  transition: background-color 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
 }

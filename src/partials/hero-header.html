@@ -1,5 +1,20 @@
 <header class="header" id="hero-header">
   <div class="container">
+    <picture class="header__ellipse">
+      <source
+        srcset="./images/Ellipse.png 1x, ./images/Ellipse-2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="./images/Ellipse-tab.png 1x, ./images/Ellipse-tab-2x.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./images/Ellipse-mob.png 1x, ./images/Ellipse-mob-2x.png 2x"
+        media="(min-width: 320px)"
+      />
+      <img src="./images/Ellipse-mob.png" alt="icecream" />
+    </picture>
     <div class="header-top">
       <nav class="header-nav">
         <a class="header-nav__logo logo" href="#icecream">
@@ -9,7 +24,9 @@
         </a>
         <ul class="header-nav__list list">
           <li class="header-nav__item">
-            <a class="header-nav__link link" href="#hero-header">Home</a>
+            <a class="header-nav__link link current" href="#hero-header"
+              >Home</a
+            >
           </li>
           <li class="header-nav__item">
             <a class="header-nav__link link" href="#contacts">About us</a>
@@ -25,15 +42,45 @@
           </li>
         </ul>
       </nav>
-      <button class="header-top__btn btn" type="button">Buy now</button>
+      <button class="menu-open-btn" type="button">
+        <svg class="button-icon" width="20" height="12">
+          <use href="./images/icon.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <button class="header-top__btn btn" type="button" data-modal-open>
+        Buy now
+        <svg class="mob-top-icon" width="8" height="16">
+          <use href="./images/icon.svg#icon-bracket"></use>
+        </svg>
+      </button>
+    </div>
+    <picture class="header__icecream">
+      <source
+        srcset="./images/icecream.png 1x, ./images/icecream-2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="./images/icecream-tab.png 1x, ./images/icecream-tab-2x.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./images/icecream-mob.png 1x, ./images/icecream-mob-2x.png 2x"
+        media="(min-width: 320px)"
+      />
+      <img src="./images/icecream-mob.png" alt="icecream" />
+    </picture>
+
+    <div class="header-mob-content">
+      <h1 class="header-title" id="icecream">
+        <span class="header-title__pretitle">ice cream made with</span>
+        <span class="header-title__posttitle">passion</span>
+      </h1>
+      <div class="header-btn">
+        <a class="header-btn-products btn link" href="#products">Products</a>
+        <a class="header-btn-made btn link" href="#about">How it’s made?</a>
+      </div>
     </div>
 
-    <h1 class="header-title" id="icecream">
-      <span class="header-title__text1">ice cream made with</span>
-      <span class="header-title__text2">passion</span>
-    </h1>
-    <a class="header-btn-products btn" href="#products">Products</a>
-    <a class="header-btn-made btn" href="#about">How it’s made?</a>
     <div class="header-groups">
       <div class="header-groups__cafes">
         <div class="header-groups__ellipse"></div>
@@ -47,16 +94,16 @@
       </div>
     </div>
 
-    <picture>
+    <picture class="header__milk">
       <source
-        srcset="./images/milk.jpg 1x, ./images/milk-2x.jpg 2x"
+        srcset="./images/milk.png 1x, ./images/milk-2x.png 2x"
         media="(min-width: 1200px)"
       />
       <source
-        srcset="./images/milk-tab.jpg 1x, ./images/milk-tab-2x.jpg 2x"
+        srcset="./images/milk-tab.png 1x, ./images/milk-tab-2x.png 2x"
         media="(min-width: 768px)"
       />
-      <img src="./images/milk-tab.jpg" alt="milk" width="152" height="154" />
+      <img src="./images/milk-tab.png" alt="milk" />
     </picture>
 
     <p class="header-text">
@@ -67,62 +114,131 @@
     <button class="header-btn-arrow btn">
       <picture>
         <source
-          srcset="./images/arrow-right.jpg 1x, ./images/arrow-right-2x.jpg 2x"
+          srcset="./images/arrow-right.png 1x, ./images/arrow-right-2x.png 2x"
           media="(min-width: 1200px)"
         />
         <source
           srcset="
-            ./images/arrow-right-tab.jpg    1x,
-            ./images/arrow-right-tab-2x.jpg 2x
+            ./images/arrow-right-tab.png    1x,
+            ./images/arrow-right-tab-2x.png 2x
           "
           media="(min-width: 768px)"
         />
-        <img
-          src="./images/arrow-right-tab.jpg"
-          alt="arrow-right"
-          width="18"
-          height="18"
-        />
+        <img src="./images/arrow-right-tab.png" alt="arrow-right" />
       </picture>
     </button>
 
-    <picture>
+    <picture class="header__girl">
       <source
-        srcset="./images/icecream.jpg 1x, ./images/icecream-2x.jpg 2x"
+        srcset="./images/girl.png 1x, ./images/girl-2x.png 2x"
         media="(min-width: 1200px)"
       />
       <source
-        srcset="./images/icecream-tab.jpg 1x, ./images/icecream-tab-2x.jpg 2x"
+        srcset="./images/girl-tab.png 1x, ./images/girl-tab-2x.png 2x"
         media="(min-width: 768px)"
       />
-      <source
-        srcset="./images/icecream-mob.jpg 1x, ./images/icecream-mob-2x.jpg 2x"
-        media="(min-width: 320px)"
-      />
-      <img
-        src="./images/icecream-mob.jpg"
-        alt="icecream"
-        width="171"
-        height="410"
-      />
+      <img src="./images/girl-tab.png" alt="girl" />
     </picture>
-
-    <picture>
-      <source
-        srcset="./images/girl.jpg 1x, ./images/girl-2x.jpg 2x"
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="./images/girl-tab.jpg 1x, ./images/girl-tab-2x.jpg 2x"
-        media="(min-width: 768px)"
-      />
-      <img src="./images/girl-tab.jpg" alt="girl" width="190" height="150" />
-    </picture>
-
-    <button class="menu-open-btn" type="button">
-      <svg class="button-icon" width="20" height="12">
-        <use href="./images/icon.svg#icon-Burger"></use>
-      </svg>
-    </button>
+  </div>
+  <div class="container-mob">
+    <div class="mob-menu is-hidden">
+      <button type="button" class="menu-close-btn">
+        <svg class="button-icon" width="14" height="14">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
+      <button class="mob-top__btn btn" type="button" data-modal-open>
+        Buy now
+        <svg class="mob-top-icon" width="8" height="16">
+          <use href="./images/icon.svg#icon-bracket"></use>
+        </svg>
+      </button>
+      <nav class="mob-nav">
+        <ul class="mob-nav__list list">
+          <li class="mob-nav__item">
+            <a class="mob-nav__link link current" href="#hero-header">Home</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link link" href="#contacts">About us</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link link" href="#about">How it’s made?</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link link" href="#products">Our products</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link link" href="#footer">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="data-modal-close" data-modal-close>
+        <svg class="button-icon" width="14" height="14">
+          <use href="./images/symbol-modal.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+      <form class="modal-form">
+        <div class="modal-icon">
+          <label for="name" class="modal-label">Имя</label>
+          <div class="modal-input-icon">
+            <input
+              type="text"
+              class="modal-input"
+              name="name"
+              id="name"
+              required
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/symbol-modal.svg#icon-person"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="modal-icon">
+          <label for="tel" class="modal-label">Телефон</label>
+          <div class="modal-input-icon">
+            <input
+              type="tel"
+              class="modal-input"
+              name="tel"
+              id="tel"
+              required
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/symbol-modal.svg#icon-phone"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="modal-icon">
+          <label for="mail" class="modal-label">Почта</label>
+          <div class="modal-input-icon">
+            <input
+              type="email"
+              class="modal-input"
+              name="mail"
+              id="mail"
+              required
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./images/symbol-modal.svg#icon-email"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="modal-textarea">
+          <label for="comment" class="modal-label">Комментарий</label>
+          <textarea
+            class="modal-area"
+            name="comment"
+            id="comment"
+            placeholder="Введите текст"
+          ></textarea>
+        </div>
+        <button type="submit" class="modal-btn btn">Отправить</button>
+      </form>
+    </div>
   </div>
 </header>
