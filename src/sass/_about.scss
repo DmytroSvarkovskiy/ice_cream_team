@@ -2,9 +2,9 @@
   padding-bottom: 0;
   background-color: $background-color;
   background-repeat: no-repeat;
-  background-position: center;
+  max-width: 100%;
   background-image: url('../images/about/about-mob1x-milk.png');
-  background-size: contain;
+  background-size: 100%;
   background-position: top 590px left 0;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -37,60 +37,47 @@
     display: flex;
     align-items: flex-end;
   }
-  @include desktop {
-    display: flex;
-    align-items: flex-end;
-  }
 }
 
 .about__pre-title {
   font-family: 'Titan One';
-  font-size: 18px;
-  line-height: 1.16;
+  @include font(null, 18px, 1.16, null);
   text-align: center;
   text-transform: uppercase;
   color: $pre-title-color;
   margin-bottom: 15px;
   @include mobile {
     font-size: 20px;
-    line-height: 1.16;
   }
   @include tablet {
-    font-size: 26px;
-    line-height: 1.15;
+    @include font(null, 26px, 1.15, null);
     margin-bottom: 16px;
   }
   @include desktop {
-    font-size: 30px;
-    line-height: 1.13;
-    text-align: center;
-    letter-spacing: 0.04em;
+    @include font(null, 30px, 1.13, 0.04em);
+
     margin-bottom: 16px;
   }
 }
 
 .about__title {
   font-family: 'Titan One';
+  @include font(null, 34px, 1.14, 0.04em);
   font-size: 34px;
-  line-height: 1.14;
   text-align: center;
-
   text-transform: uppercase;
-  letter-spacing: 0.04em;
   color: $title-text-color;
   margin-bottom: 32px;
   @include mobile {
-    font-size: 40px;
+    @include font(null, 40px, 1.15, null);
     margin-bottom: 32px;
   }
   @include tablet {
     font-size: 48px;
-    font-size: 34px;
+    margin-bottom: 40px;
   }
   @include desktop {
-    font-size: 58px;
-    line-height: 1.13;
-    letter-spacing: 0.06em;
+    @include font(null, 58px, 1.13, 0.06em);
     margin-bottom: 60px;
   }
 }
@@ -106,6 +93,7 @@
 
   @include tablet {
     width: 336px;
+
     margin-right: 32px;
     margin-left: 32px;
   }
