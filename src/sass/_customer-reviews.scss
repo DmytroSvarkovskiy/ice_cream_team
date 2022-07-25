@@ -11,16 +11,18 @@
   }
 }
 .review-content {
+  padding: 43px 58px 26px 65px;
   margin: 0 auto;
+
   position: relative;
   margin-bottom: 32px;
-  width: 280;
-  height: 308px;
+  min-width: 280;
+  max-height: 308px;
   background: #fafafa;
   @include mobile {
+    padding: 0;
     width: 440px;
     height: 200px;
-    margin-left: 0;
   }
   @include tablet {
     margin: 0 auto;
@@ -29,7 +31,6 @@
     height: 164px;
   }
   @include desktop {
-    margin: 0 auto;
     margin-bottom: 32px;
     width: 968px;
     height: 138px;
@@ -63,20 +64,11 @@
 }
 
 .customer-review-text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.58;
+  @include font(500, 12px, 2.55, null);
   text-align: center;
   color: #000000;
-
   position: relative;
-  z-index: 2;
-  top: 10px;
-  left: 65px;
-  max-width: 157px;
-
-  display: inline-flex;
-  text-align: center;
+  min-width: 157px;
 
   background-image: -webkit-repeating-linear-gradient(
     top,
@@ -85,134 +77,51 @@
     #e1e1e1 29px,
     transparent 30px
   );
-  //   background-image: repeating-linear-gradient(
-  //     top,
-  //     transparent 0px,
-  //     transparent 29px,
-  //     #e1e1e1 29px,
-  //     transparent 30px
-  //   );
+  background-image: repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 29px,
+    #e1e1e1 29px,
+    transparent 30px
+  );
   @include mobile {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 2.14;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: #000000;
+    @include font(500, 14px, 2.14, 0.04em);
 
-    position: relative;
     z-index: 2;
-    top: 10px;
+    top: 37px;
     left: 65px;
-    max-width: 330px;
-
-    display: inline-flex;
-    text-align: center;
-
-    background-image: -webkit-repeating-linear-gradient(
-      top,
-      transparent 0px,
-      transparent 29px,
-      #e1e1e1 29px,
-      transparent 30px
-    );
-    // background-image: repeating-linear-gradient(
-    //   top,
-    //   transparent 0px,
-    //   transparent 29px,
-    //   #e1e1e1 29px,
-    //   transparent 30px
-    // );
+    width: 330px;
   }
   @include tablet {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 2.14;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: #000000;
-
-    position: relative;
-    z-index: 2;
-    top: 10px;
+    @include font(500, 14px, 2.16, 0.04em);
     left: 51px;
-    max-width: 514px;
-
-    display: inline-flex;
-    text-align: center;
-
-    background-image: -webkit-repeating-linear-gradient(
-      top,
-      transparent 0px,
-      transparent 29px,
-      #e1e1e1 29px,
-      transparent 30px
-    );
-    // background-image: repeating-linear-gradient(
-    //   top,
-    //   transparent 0px,
-    //   transparent 29px,
-    //   #e1e1e1 29px,
-    //   transparent 30px
-    // );
+    width: 514px;
+    top: 37px;
   }
   @include desktop {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: #000000;
+    @include font(500, 16px, 1.86, 0.04em);
 
-    position: relative;
-    z-index: 2;
-    top: 10px;
     left: 109px;
-    max-width: 750px;
-
-    display: inline-flex;
-    text-align: center;
-
-    background-image: -webkit-repeating-linear-gradient(
-      top,
-      transparent 0px,
-      transparent 29px,
-      #e1e1e1 29px,
-      transparent 30px
-    );
-    // background-image: repeating-linear-gradient(
-    //   top,
-    //   transparent 0px,
-    //   transparent 29px,
-    //   #e1e1e1 29px,
-    //   transparent 30px
-    // );
+    width: 750px;
   }
 }
 .review-icon {
-  position: relative;
+  position: absolute;
   top: 30px;
   left: 53px;
 
   @include mobile {
     z-index: 1;
-    position: relative;
     top: 30px;
     left: 28px;
-    max-width: 54px;
-    max-height: 40px;
   }
   @include tablet {
     z-index: 1;
-    position: relative;
     top: 20px;
     left: 6px;
-    max-width: 54px;
-    max-height: 40px;
   }
   @include desktop {
     z-index: 1;
-    position: relative;
     top: 32px;
     left: 72px;
   }
