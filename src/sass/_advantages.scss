@@ -1,89 +1,97 @@
 .advantages {
-    background-color: $background-color;
+  padding-top: 40px;
+  padding-bottom: 0;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
+  }
+  background-color: $background-color;
 }
 
 .advantages-list {
-    @include tablet {
+  @include tablet {
     display: flex;
-    }
+  }
 }
 
 .advantages-list__item + .advantages-list__item {
-    margin-top: 32px;
-    
-    @include mobile {
-        margin-top: 35px;
-    }
-    @include tablet {
-        margin-top: 0;
-        margin-left: 125px;
-    }
-    @include desktop {
-        margin-left: 115px;
-    }
+  margin-top: 32px;
+
+  @include mobile {
+    margin-top: 35px;
+  }
+  @include tablet {
+    margin-top: 0;
+    margin-left: 125px;
+  }
+  @include desktop {
+    margin-left: 115px;
+  }
 }
 
 .advantages-list__icon {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    @include mobile {
-        margin-bottom: 20px;
-    }
-    @include tablet {
-        margin-bottom: 32px;
-    }
-    @include desktop {
-        margin-bottom: 40px;
-    }
+  @include mobile {
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages-list__title {
-    margin-bottom: 19px;
-    
-    font-family: 'Titan One';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.14;
-    letter-spacing: 0.04em;
-    color: $title-text-color;
+  margin-bottom: 19px;
 
-    @include mobile {
-        font-size: 60px;
-        margin-bottom: 20px;
-    }
-    @include tablet {
-        font-size: 48px;
-        margin-bottom: 13px;
-    }
-    @include desktop {
-        font-size: 58px;
-        margin-bottom: 16px;
-    }
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $title-text-color;
+
+  @include mobile {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 48px;
+    margin-bottom: 13px;
+  }
+  @include desktop {
+    font-size: 58px;
+    margin-bottom: 16px;
+  }
 }
 
 .advantages-list__text {
-    max-width: 230px;
+  max-width: 230px;
 
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 170%;
-    color: $secondary-text-color-dark;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 170%;
+  color: $secondary-text-color-dark;
 
-    @include mobile {
-        max-width: 280px;
-        font-size: 20px;
-        line-height: 172%;
-    }
-    @include tablet {
-        max-width: 170px;
-        font-size: 14px;
-        line-height: 174%;
-    }
-    @include desktop {
-        max-width: 288px;
-        font-size: 16px;
-        line-height: 176%;
-    }
+  @include mobile {
+    max-width: 280px;
+    font-size: 20px;
+    line-height: 172%;
+  }
+  @include tablet {
+    max-width: 170px;
+    font-size: 14px;
+    line-height: 174%;
+  }
+  @include desktop {
+    max-width: 288px;
+    font-size: 16px;
+    line-height: 176%;
+  }
 }
