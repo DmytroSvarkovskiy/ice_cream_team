@@ -1,242 +1,238 @@
 .gallery {
+  background-image: linear-gradient(to bottom, $background-color 34%, #fff 34%);
+  @include tablet {
     background-image: linear-gradient(
-    to bottom,
-    $background-color 34%,
-    #fff 34%
+      to bottom,
+      $background-color 55%,
+      #fff 55%
     );
-    @include tablet {
-        background-image: linear-gradient(
-        to bottom,
-        $background-color 55%,
-        #fff 55%
-        );
-    }
-    @include desktop {
-        background-image: linear-gradient(
-        to bottom,
-        $background-color 27%,
-        #fff 27%
-        );
-    }
-}   
+  }
+  @include desktop {
+    background-image: linear-gradient(
+      to bottom,
+      $background-color 27%,
+      #fff 27%
+    );
+  }
+}
 
 .gallery .container {
-    position: relative;
-    min-height: 136px;
+  position: relative;
+  min-height: 136px;
 
-    @media screen and(min-width: 320px) and (max-width: 479px) {
-        max-width: 320px;
-    }
+  @media screen and(min-width: 320px) and (max-width: 479px) {
+    max-width: 320px;
+  }
+  @include mobile {
+    min-height: 202px;
+  }
+  @include tablet {
+    min-height: 327px;
+  }
+  @include desktop {
+    min-height: 430px;
+  }
+}
+
+.gallery img {
+  position: absolute;
+  border-radius: 8px;
+
+  &:not(:nth-child(5)) {
+    width: 43px;
     @include mobile {
-        min-height: 202px;
+      width: 65px;
     }
     @include tablet {
-        min-height: 327px;
+      width: 105px;
     }
     @include desktop {
-        min-height: 430px;
+      width: 138px;
     }
-}   
-
-.gallery img { 
-    position: absolute;
-    border-radius: 8px;
-
-    &:not(:nth-child(5)) {
-        width: 43px;
-        @include mobile {
-            width: 65px;
-        }
-        @include tablet {
-            width: 105px;
-        }
-        @include desktop {
-            width: 138px;
-        }
-    }
-    &:nth-child(5) {
-        width: 89px;
-        @include mobile {
-            width: 134px;
-        }
-        @include tablet {
-            width: 214px;
-        }
-        @include desktop {
-            width: 283px;
-        }
+  }
+  &:nth-child(5) {
+    width: 89px;
+    @include mobile {
+      width: 134px;
     }
     @include tablet {
-        border-radius: 20px;
+      width: 214px;
     }
-    &:hover {
-        transform: scale(1.5);
-        z-index: 9;
+    @include desktop {
+      width: 283px;
     }
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @include tablet {
+    border-radius: 20px;
+  }
+  &:hover {
+    transform: scale(1.5);
+    z-index: 9;
+  }
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery__img-1 {
-    top: 45px;
-    left: 0;
-    @include mobile {
-        top: 67px;
-    }
-    @include tablet {
-        top: 108px;
-    }
-    @include desktop {
-        top: 143px;
-        left: 93px;
-    }
+  top: 45px;
+  left: 0;
+  @include mobile {
+    top: 67px;
+  }
+  @include tablet {
+    top: 108px;
+  }
+  @include desktop {
+    top: 143px;
+    left: 93px;
+  }
 }
 
 .gallery__img-2 {
-    top: 28px;
-    left: 46px;
-    @include mobile {
-        top: 42px;
-        left: 69px;
-    }
-    @include tablet {
-        top: 67px;
-        left: 111px;
-    }
-    @include desktop {
-        top: 89px;
-        left: 239px;
-    }
+  top: 28px;
+  left: 46px;
+  @include mobile {
+    top: 42px;
+    left: 69px;
+  }
+  @include tablet {
+    top: 67px;
+    left: 111px;
+  }
+  @include desktop {
+    top: 89px;
+    left: 239px;
+  }
 }
 
 .gallery__img-3 {
-    top: 74px;
-    left: 46px;
-    @include mobile {
-        top: 110px;
-        left: 69px;
-    }
-    @include tablet {
-        top: 177px;
-        left: 111px;
-    }
-    @include desktop {
-        top: 233px;
-        left: 239px;
-    }
+  top: 74px;
+  left: 46px;
+  @include mobile {
+    top: 110px;
+    left: 69px;
+  }
+  @include tablet {
+    top: 177px;
+    left: 111px;
+  }
+  @include desktop {
+    top: 233px;
+    left: 239px;
+  }
 }
 
 .gallery__img-4 {
-    top: 0;
-    left: 92px;
-    @include mobile {
-        left: 138px;
-    }
-    @include tablet {
-        left: 221px;
-    }
-    @include desktop {
-        left: 385px;
-    }
+  top: 0;
+  left: 92px;
+  @include mobile {
+    left: 138px;
+  }
+  @include tablet {
+    left: 221px;
+  }
+  @include desktop {
+    left: 385px;
+  }
 }
 
 .gallery__img-5 {
-    top: 92px;
-    left: 92px;
-    @include mobile {
-        top: 138px;
-        left: 138px;
-    }
-    @include tablet {
-        top: 221px;
-        left: 221px;
-    }
-    @include desktop {
-        top: 291px;
-        left: 385px;
-    }
+  top: 92px;
+  left: 92px;
+  @include mobile {
+    top: 138px;
+    left: 138px;
+  }
+  @include tablet {
+    top: 221px;
+    left: 221px;
+  }
+  @include desktop {
+    top: 291px;
+    left: 385px;
+  }
 }
 
 .gallery__img-6 {
-    top: 31px;
-    left: 184px;
-    @include mobile {
-        top: 46px;
-        left: 276px;
-    }
-    @include tablet {
-        top: 74px;
-        left: 442px;
+  top: 31px;
+  left: 184px;
+  @include mobile {
+    top: 46px;
+    left: 276px;
+  }
+  @include tablet {
+    top: 74px;
+    left: 442px;
     @include desktop {
-        top: 99px;
-        left: 676px;
+      top: 99px;
+      left: 676px;
     }
-    }
+  }
 }
 
 .gallery__img-7 {
-    top: 77px;
-    left: 184px;
-    @include mobile {
-        top: 115px;
-        left: 276px;
-    }
-    @include tablet {
-        top: 185px;
-        left: 442px;
-    }
-    @include desktop {
-        top: 245px;
-        left: 676px;
-    }
+  top: 77px;
+  left: 184px;
+  @include mobile {
+    top: 115px;
+    left: 276px;
+  }
+  @include tablet {
+    top: 185px;
+    left: 442px;
+  }
+  @include desktop {
+    top: 245px;
+    left: 676px;
+  }
 }
 
 .gallery__img-8 {
-    top: 21px;
-    left: 230px;
-    @include mobile {
-        top: 31px;
-        left: 345px;
-    }
-    @include tablet {
-        top: 50px;
-        left: 552px;
-    }
-    @include desktop {
-        top: 66px;
-        left: 822px;
-    }
+  top: 21px;
+  left: 230px;
+  @include mobile {
+    top: 31px;
+    left: 345px;
+  }
+  @include tablet {
+    top: 50px;
+    left: 552px;
+  }
+  @include desktop {
+    top: 66px;
+    left: 822px;
+  }
 }
 
 .gallery__img-9 {
-    top: 67px;
-    left: 230px;
-    @include mobile {
-        top: 100px;
-        left: 345px;
-    }
-    @include tablet {
-        top: 161px;
-        left: 552px;
-    }
-    @include desktop {
-        top: 213px;
-        left: 822px;
-    }
+  top: 67px;
+  left: 230px;
+  @include mobile {
+    top: 100px;
+    left: 345px;
+  }
+  @include tablet {
+    top: 161px;
+    left: 552px;
+  }
+  @include desktop {
+    top: 213px;
+    left: 822px;
+  }
 }
 
 .gallery__img-10 {
-    top: 49px;
-    left: 276px;
-    @include mobile {
-        top: 73px;
-        left: 415px;
-    }
-    @include tablet {
-        top: 118px;
-        left: 662px;
-    }
-    @include desktop {
-        top: 155px;
-        left: 968px;
-    }
+  top: 49px;
+  left: 276px;
+  @include mobile {
+    top: 73px;
+    left: 415px;
+  }
+  @include tablet {
+    top: 118px;
+    left: 662px;
+  }
+  @include desktop {
+    top: 155px;
+    left: 968px;
+  }
 }
