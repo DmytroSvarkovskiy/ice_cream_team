@@ -112,12 +112,24 @@
   line-height: 186%;
   text-align: right;
   color: $secondary-text-color-dark;
+  @include tablet {
+    font-size: 14px;
+    line-height: 186%;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.02em;
+  }
 }
 
 .footer-contac-link {
   text-decoration: none;
   color: $title-text-color;
-
+  @include tablet {
+    font-size: 14px;
+    line-height: 186%;
+  }
   @include desktop {
     font-size: 16px;
     line-height: 186%;
