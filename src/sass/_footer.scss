@@ -54,18 +54,21 @@
   text-transform: uppercase;
   color: $title-text-color;
   max-width: 200px;
+  margin-bottom: 40px;
 
   @include tablet {
     font-size: 48px;
     line-height: 1.14;
     letter-spacing: 0.06em;
     max-width: 340px;
+    margin-bottom: 0;
   }
 
   @include desktop {
     font-size: 58px;
     line-height: 1.13;
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
