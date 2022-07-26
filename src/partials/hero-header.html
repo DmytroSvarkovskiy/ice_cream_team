@@ -17,7 +17,7 @@
     </picture>
     <div class="header-top">
       <nav class="header-nav">
-        <a class="header-nav__logo logo" href="#icecream">
+        <a class="header-nav__logo logo shake-horizontal" href="#icecream">
           <svg class="header-nav__icon" width="199" height="50">
             <use href="./images/icon.svg#icon-logo"></use>
           </svg>
@@ -49,7 +49,12 @@
           <use href="./images/icon.svg#icon-burger"></use>
         </svg>
       </button>
-      <button class="header-top__btn btn" type="button" data-modal-open>
+      <button
+        class="header-top__btn btn heartbeat"
+        id="demotext"
+        type="button"
+        data-modal-open
+      >
         Buy now
         <svg class="mob-top-icon" width="8" height="16">
           <use href="./images/icon.svg#icon-bracket"></use>
@@ -73,7 +78,7 @@
     </picture>
 
     <div class="header-mob-content">
-      <h1 class="header-title" id="icecream">
+      <h1 class="header-title text-focus-in" id="icecream">
         <span class="header-title__pretitle">ice cream made with</span>
         <span class="header-title__posttitle">passion</span>
       </h1>
@@ -98,7 +103,7 @@
       </div>
     </div>
 
-    <picture class="header__milk">
+    <picture class="header__milk slide-in-elliptic-right-fwd">
       <source
         srcset="./images/milk.png 1x, ./images/milk-2x.png 2x"
         media="(min-width: 1200px)"
@@ -114,24 +119,30 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et
     </p>
-
-    <button class="header-btn-arrow btn">
-      <picture>
-        <source
-          srcset="./images/arrow-right.png 1x, ./images/arrow-right-2x.png 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/arrow-right-tab.png    1x,
-            ./images/arrow-right-tab-2x.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <img src="./images/arrow-right-tab.png" alt="arrow-right" />
-      </picture>
-    </button>
-
+    <div class="arrow-div">
+      <button class="header-btn-arrow btn arrow-open-btn" type="button">
+        <picture>
+          <source
+            srcset="./images/arrow-right.png 1x, ./images/arrow-right-2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/arrow-right-tab.png    1x,
+              ./images/arrow-right-tab-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img src="./images/arrow-right-tab.png" alt="arrow-right" />
+        </picture>
+      </button>
+      <p class="header-text-dop arrow-menu is-hidden">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+        asperiores autem est repudiandae! Eligendi quibusdam asperiores itaque
+        quam nihil nulla, praesentium culpa error necessitatibus reprehenderit
+        quaerat nam labore eius dignissimos.
+      </p>
+    </div>
     <picture class="header__girl">
       <source
         srcset="./images/girl.png 1x, ./images/girl-2x.png 2x"
@@ -151,7 +162,7 @@
           <use href="./images/icon.svg#icon-close"></use>
         </svg>
       </button>
-      <button class="mob-top__btn btn" type="button" data-modal-open>
+      <button class="mob-top__btn btn" type="button">
         Buy now
         <svg class="mob-top-icon" width="8" height="16">
           <use href="./images/icon.svg#icon-bracket"></use>
