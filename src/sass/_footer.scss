@@ -81,10 +81,12 @@
 
   @include tablet {
     padding-top: 67px;
+    gap: 30px;
   }
 
   @include desktop {
     padding-top: 12px;
+    gap: 30px;
   }
 }
 
@@ -115,6 +117,11 @@
 .footer-contac-link {
   text-decoration: none;
   color: $title-text-color;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 186%;
+  }
 }
 
 .copyright-container {
