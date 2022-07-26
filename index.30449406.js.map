@@ -1,0 +1,1 @@
+{"mappings":"AAAAA,EAAE,WAAWC,MAAM,CACjBC,UAAU,EACVC,aAAc,EACdC,eAAgB","sources":["src/slider.js"],"sourcesContent":["$(\".slider\").slick({\n  infinite: true,\n  slidesToShow: 1,\n  slidesToScroll: 1\n});"],"names":["$","slick","infinite","slidesToShow","slidesToScroll"],"version":3,"file":"index.30449406.js.map"}
