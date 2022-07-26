@@ -19,14 +19,14 @@
     background-image: none;
   }
   @include desktop {
-    background-image: url('../images/about/about-desk1x-milk.png');
+    background-image: url('../images/about/about-desk2x-milk.png');
 
     background-position: top 236px left 0px;
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../images/about/about-desk2x-milk.png');
+      background-image: url('../images/about/about-desk3x-milk.png');
     }
   }
 }
@@ -35,7 +35,7 @@
   display: block;
   @include tablet {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 }
 
@@ -104,18 +104,24 @@
   }
 }
 
+.about__content {
+  padding-bottom: 81px;
+}
+
 .about__after-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.58;
   color: $secondary-text-color-dark;
   margin-bottom: 26px;
-  max-width: 220px;
+  min-width: 220px;
+  padding: 0 80px 0 0;
   @include mobile {
     font-size: 13px;
     line-height: 1.68;
     margin-bottom: 26px;
     max-width: 334px;
+    padding: 0;
   }
   @include tablet {
     font-size: 14px;
@@ -138,27 +144,28 @@
   line-height: 1.58;
   color: $secondary-text-color;
   margin-bottom: 20px;
-  max-width: 220px;
-
+  min-width: 220px;
+  padding: 0 80px 0 0;
   @include mobile {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.68;
     letter-spacing: 0.04em;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     max-width: 334px;
+    padding: 0;
   }
   @include tablet {
     font-size: 14px;
     line-height: 1.78;
     letter-spacing: 0.04em;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     max-width: 334px;
   }
   @include desktop {
     font-size: 14px;
     line-height: 1.92;
     letter-spacing: 0.04em;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     max-width: 463px;
   }
 }
@@ -190,16 +197,15 @@
   }
   @include mobile {
     font-size: 15px;
-    line-height: 1.3px;
+    line-height: 1.29;
   }
   @include tablet {
     font-size: 16px;
-    line-height: 1.31px;
+    line-height: 1.31;
   }
   @include desktop {
     font-size: 16px;
-    line-height: 1.31px;
-    margin-bottom: 81px;
+    line-height: 1.31;
   }
 }
 
@@ -207,4 +213,95 @@
   width: 6.5px;
   height: 10px;
   margin-left: 14px;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+.about__modal {
+  background-color: #e498b6;
+  border-radius: 50% 20% / 10% 40%;
+  width: 300px;
+  @include mobile {
+    width: 400px;
+  }
+  @include tablet {
+    width: 600px;
+  }
+  @include desktop {
+    width: 1000px;
+  }
+}
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.about__modal-close {
+  top: 10px;
+  right: 10px;
+  fill: #9e052b;
+  &:hover {
+    fill: #f5f8f7;
+  }
+}
+
+.about__modal-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #f5f8f7;
+  text-align: center;
+  letter-spacing: 0.04em;
+  @include mobile {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.8;
+  }
 }
