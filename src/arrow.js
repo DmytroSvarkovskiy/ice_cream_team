@@ -7,7 +7,7 @@
   };
 
   refs.openArrowBtn.addEventListener('click', toggleArrow);
-  refs.closeArrowBtn.addEventListener('click', toggleArrow);
+  // refs.closeArrowBtn.addEventListener('click', toggleArrow);
 
   function toggleArrow() {
     refs.arrow.classList.toggle('is-hidden');
