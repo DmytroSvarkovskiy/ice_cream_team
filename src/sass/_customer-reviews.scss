@@ -1,4 +1,5 @@
 .customer-reviews {
+  position: relative;
   padding-bottom: 30px;
   @include tablet {
     padding-bottom: 40px;
@@ -140,4 +141,20 @@
   @include tablet {
     @include font(null, 20px, 1.86, null);
   }
+}
+
+.container .swiper-button-next::after,
+.container .swiper-button-prev::after {
+  opacity: 0.5;
+  color: $title-text-color;
+  line-height: 2;
+}
+.container .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background-image: url(../images/home.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
