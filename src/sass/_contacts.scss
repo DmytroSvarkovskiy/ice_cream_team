@@ -405,25 +405,13 @@
 // --------------------       MODAL
 //
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30;
-
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 30px;
-  border-radius: 3px;
-  background-color: $text-color;
-  transition: 0.3s all;
+.modal-location.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.modal.active,
+.modal-franchise.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -454,10 +442,27 @@
 }
 
 .modal-location {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: $text-color;
+  transition: 0.3s all;
+
   background: $background-color;
   width: 100%;
   max-width: 300px;
   height: auto;
+  overflow-y: auto;
 
   transition: all 0.8s ease 0s;
 
@@ -579,6 +584,22 @@
 //
 
 .modal-franchise {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: $text-color;
+  transition: 0.3s all;
+
   background: $background-color;
   height: auto;
   max-width: auto;
@@ -809,18 +830,13 @@
   }
 }
 
-.modal__cross.contacts-modal__close-btn {
+.contacts-modal__close-btn {
   fill: $title-text-color;
 
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    fill: #ffffff;
-    background-color: $title-text-color;
-    border-radius: 50%;
-    border: 2px solid $title-text-color;
-    width: 20px;
-    height: 20px;
+    fill: #61313d;
   }
 }
