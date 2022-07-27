@@ -1,11 +1,11 @@
 .customer-reviews {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   @include tablet {
-    padding-bottom: 40px;
+    padding-bottom: 70px;
   }
   @include desktop {
-    padding-bottom: 60px;
+    padding-bottom: 100px;
   }
   @media screen and (max-width: 1199px) {
     padding-top: 0;
@@ -154,7 +154,20 @@
   height: 13px;
 }
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
-  background-image: url(../images/home.png);
+  background-image: url(../images/homej.jpg);
   background-repeat: no-repeat;
   background-color: transparent;
+}
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  margin: 0;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include tablet {
+    padding-bottom: 20px;
+  }
+  @include desktop {
+    padding-bottom: 50px;
+  }
 }
