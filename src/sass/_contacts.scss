@@ -314,13 +314,15 @@
     text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    background: #f7174f;
+    background: #b0022e;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   color: $text-color;
 
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 161.45px;
   height: 44px;
 
@@ -344,8 +346,8 @@
   .contacts__icon {
     fill: $text-color;
 
-    width: 6px;
-    height: 10px;
+    width: 8px;
+    height: 12px;
 
     margin-left: 8px;
 
@@ -366,7 +368,10 @@
 
   color: $title-text-color;
 
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 161px;
   height: 44px;
 
@@ -390,55 +395,432 @@
   }
 
   .contacts__icon {
-    width: 6px;
-    height: 10px;
+    width: 8px;
+    height: 12px;
 
     margin-left: 13px;
   }
 }
 
-.location-backdrop {
+// --------------------       MODAL
+//
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: $text-color;
+  transition: 0.3s all;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.2);
-
-  transition: opacity 250ms linear, visibility 250ms linear;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
 }
 
 .modal-location {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  background: $background-color;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 
-  padding: 40px;
-  min-width: 300px;
-  max-height: auto;
+  transition: all 0.8s ease 0s;
 
-  background-color: var(--white-primary-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  @include mobile {
+    max-width: 400px;
+  }
+  @include tablet {
+    max-width: 800px;
+  }
+  @include desktop {
+    max-width: 900px;
+  }
+}
+
+.location__google-link {
+  margin-bottom: 5px;
+
+  width: 250px;
+  height: 180px;
+  @include mobile {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 5px;
+  }
+  @include tablet {
+    width: 350px;
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  @include desktop {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 15px;
+  }
+}
+
+.modal-location__content {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100%;
+  transition: all 0.8s ease 0s;
+}
+
+.modal-location__content-title {
+  font-family: 'Titan One';
+  text-align: center;
+
+  @include font(400, 20px, 1.13, 0.06em);
+
+  color: $title-text-color;
+
+  margin-bottom: 15px;
+  max-width: 220px;
+  @include mobile {
+    max-width: 100%;
+  }
+  @include tablet {
+    @include font(400, 25px, 1.13, 0.06em);
+    margin-bottom: 25px;
+  }
+  @include desktop {
+    @include font(400, 30px, 1.13, 0.06em);
+    margin-bottom: 30px;
+  }
+}
+
+.location__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  @include tablet {
+    gap: 25px;
+  }
+  @include desktop {
+    gap: 30px;
+  }
+}
+
+.location__content-item {
+  display: flex;
+
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.location__link {
+  @include font(700, 14px, 1.3, null);
+  padding: 8px;
+
+  border-radius: 10px;
+
+  background: $text-color;
+  color: $title-text-color;
+
+  &:hover,
+  &:focus {
+    background: $title-text-color;
+    color: $text-color;
+  }
+
+  @include tablet {
+    @include font(700, 14px, 1.3, null);
+    padding: 8px;
+  }
+  @include desktop {
+    @include font(700, 16px, 1.3, null);
+    padding: 10px;
+  }
+}
+
+// ----------------   franchise  Modal
+//
+
+.modal-franchise {
+  background: $background-color;
+  height: auto;
+  max-width: auto;
+
+  transition: all 0.6s ease 0s;
+
+  @include mobile {
+    max-width: 360px;
+  }
+  @include tablet {
+    max-width: 400px;
+  }
+  @include desktop {
+    max-width: 500px;
+  }
+}
+
+.modal-franchise__content {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100%;
+  transition: all 0.8s ease 0s;
+}
+
+.franchise__modal-form {
+  display: block;
+}
+
+.franchise__title {
+  font-family: 'Titan One';
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $pre-title-color;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @include font(400, 20px, 1.1, null);
+
+  @include mobile {
+    @include font(400, 20px, 1.1, null);
+  }
+  @include tablet {
+    @include font(400, 26px, 1.1, null);
+  }
+  @include desktop {
+    @include font(400, 30px, 1.1, null);
+  }
+}
+
+.franchise__after-title {
+  color: $title-text-color;
+  margin-bottom: 10px;
+
+  @include font(500, 14px, 1.5, null);
+
+  @include mobile {
+    @include font(500, 14px, 1.6, null);
+  }
+  @include tablet {
+    @include font(500, 16px, 1.6, null);
+  }
+  @include desktop {
+    @include font(500, 18px, 1.8, null);
+  }
+}
+
+.franchise__modal-input {
+  display: block;
+  width: 100%;
+  height: 30px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  background-color: $text-color;
 
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
-  .location-backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(0);
+  padding-left: 10px;
+  outline: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: $title-text-color;
   }
 
   @include mobile {
-    width: 450px;
-    height: 609px;
+    height: 30px;
+    padding-left: 12px;
   }
   @include tablet {
-    width: 450px;
-    height: 609px;
+    height: 35px;
+    padding-left: 14;
   }
   @include desktop {
-    width: 528px;
-    height: 581px;
+    height: 40px;
+    padding-left: 16px;
+  }
+}
+
+.franchise__modal-label {
+  display: block;
+  text-align: left;
+
+  @include font(500, 10px, 1.16, null);
+  margin-bottom: 4px;
+
+  color: $title-text-color;
+
+  @include mobile {
+    @include font(500, 11px, 1.16, null);
+  }
+  @include tablet {
+    @include font(500, 12px, 1.16, null);
+  }
+  @include desktop {
+    @include font(500, 14px, 1.16, null);
+  }
+}
+
+.franchise__modal-fields {
+  margin-bottom: 10px;
+}
+
+.franchise__modal-form .franchise__modal-comment {
+  margin-bottom: 20px;
+}
+
+.franchise__input-wrap {
+  position: relative;
+}
+
+.franchise__modal-text {
+  display: block;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  height: 100px;
+  padding: 10px 14px;
+
+  resize: none;
+  outline: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    border-color: $title-text-color;
+  }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.14;
+
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.16;
+    }
+  }
+
+  @include tablet {
+    height: 120px;
+    padding: 12px 16px;
+  }
+  @include desktop {
+    height: 120px;
+    padding: 12px 16px;
+  }
+}
+
+.franchise__modal-btn {
+  background: $text-color;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+
+  color: $title-text-color;
+
+  width: 110px;
+  height: 30px;
+
+  @include font(700, 12px, 1.3, null);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @include tablet {
+    @include font(700, 14px, 1.3, null);
+
+    width: 140px;
+    height: 40px;
+  }
+  @include desktop {
+    @include font(700, 16px, 1.3, null);
+
+    width: 150px;
+    height: 44px;
+  }
+}
+
+.franchise__icon {
+  margin-left: 10px;
+  width: 6px;
+  height: 10px;
+
+  @include tablet {
+    width: 6px;
+    height: 10px;
+  }
+  @include desktop {
+    width: 8px;
+    height: 12px;
+  }
+}
+
+.modal__cross.contacts-modal__close-btn {
+  fill: $title-text-color;
+
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+    background-color: $title-text-color;
+    border-radius: 50%;
+    border: 2px solid $title-text-color;
+    width: 20px;
+    height: 20px;
   }
 }
