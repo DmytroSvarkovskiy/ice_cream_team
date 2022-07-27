@@ -240,11 +240,13 @@
   z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
-  border-radius: 3px;
+  // padding: 30px;
+  // border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
+}
 
+.about__modal-content {
   background-color: #e498b6;
   border-radius: 50% 20% / 10% 40%;
   width: 300px;
