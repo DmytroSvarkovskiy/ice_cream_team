@@ -18,7 +18,6 @@
     line-height: 1.13;
   }
 }
-
 .products-title {
   margin-bottom: 148px;
   font-family: 'Titan One';
@@ -40,7 +39,6 @@
     line-height: 1.14;
   }
 }
-
 .products-content {
   position: relative;
   width: 100%;
@@ -65,7 +63,6 @@
     width: 368px;
   }
 }
-
 .products-list {
   @include mobile {
     display: flex;
@@ -76,7 +73,6 @@
     display: flex;
   }
 }
-
 .products-item {
   display: flex;
   align-items: center;
@@ -95,7 +91,6 @@
         margin-bottom: 140px;
       }
     }
-
     @include tablet {
       &:not(:last-child) {
         margin-right: 16px;
@@ -108,7 +103,6 @@
     }
   }
 }
-
 .products-subtitle {
   position: relative;
   padding-top: 160px;
@@ -130,7 +124,6 @@
     line-height: 1.13;
   }
 }
-
 .products-subtitle::after {
   content: '';
   position: absolute;
@@ -143,7 +136,6 @@
   display: block;
   box-shadow: 12px 0 #ffffff, -12px 0 #ffffff;
 }
-
 .products-content::before {
   content: url(/src/images/products-icecream-mobile-min.png);
   position: absolute;
@@ -165,7 +157,6 @@
     top: -261px;
   }
 }
-
 .products-text {
   padding: 0 40px;
   font-weight: 700;
@@ -184,7 +175,6 @@
     line-height: 1.75;
   }
 }
-
 .products-btn {
   margin: 32px auto 40px;
   display: flex;
@@ -192,12 +182,15 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-
+  transition: transform 0.1s linear;
+  &:hover,
+  &:focus {
+    transform: rotate(-90deg);
+  }
   @include desktop {
     margin: 60px auto;
   }
 }
-
 .products-icecoffee {
   background: #f0d1a5;
   &::before {
@@ -222,7 +215,6 @@
     }
   }
 }
-
 .products-milkshakes {
   background: #c2e297;
   &::before {
@@ -247,54 +239,134 @@
     }
   }
 }
-
-// .overlay {
-//   opacity: 0;
-//   visibility: hidden;
-
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   z-index: 20;
-//   transition: 0.3s all;
-// }
-
-.modal {
+.overlay {
   opacity: 0;
   visibility: hidden;
-
-  // width: 100%;
-  // max-width: 500px;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+.products-modal {
+  opacity: 1;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 500px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  // z-index: 30;
-
-  // box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  // text-align: center;
-  // padding: 30px;
-  // border-radius: 30px;
-  // background-color: #fff;
-  // transition: 0.3s all;
+  transform: translate(-50%, -50%) scale(0.05);
+  z-index: 30;
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: $pre-title-color;
+  transition: 0.3s all;
 }
-
-.modal.active,
+.products-modal.active {
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  opacity: 1;
+  visibility: visible;
+}
+.products-modal.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
-.modal__cross {
+.modal__cros {
   width: 15px;
   height: 15px;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: #444;
+  top: 15px;
+  right: 15px;
+  transition: transform 250ms linear;
+  fill: $title-text-color;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    transform: rotate(360deg);
+  }
+}
+.products-modal__icecream {
+  width: auto;
+  height: auto;
+  transition: transform 250ms linear;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.products-modal__icecoffee {
+  background: #e9bf84;
+}
+.products-modal__milkshake {
+  background: #a9d86b;
+}
+.modal-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.modal-text {
+  display: block;
+  height: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.76;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.04em;
+  @media screen and (max-width: 400px) {
+    font-size: 13px;
+  }
+}
+.products-modal-btn {
+  margin: 20px auto auto;
+  width: 159px;
+  height: 44px;
+  background: $title-text-color;
+  border-radius: 22px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: black;
+  }
+}
+.heartbeatt:not(:hover) {
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@keyframes heartbeatt {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
 }
