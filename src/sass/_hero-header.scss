@@ -50,6 +50,13 @@
   display: flex;
   align-items: center;
 }
+.header-nav__icon {
+  transition: transform 350ms linear;
+}
+.header-nav__icon:hover,
+.header-nav__icon:focus {
+  transform: scaleX(1.15);
+}
 
 .menu-open-btn {
   margin-left: auto;
@@ -92,7 +99,12 @@
     color: $title-text-color;
   }
 }
-
+.header-nav__item {
+  transition: transform 350ms linear;
+}
+.header-nav__item:hover {
+  transform: scale(1.15);
+}
 .header-top__btn {
   display: none;
   @include tablet {
@@ -374,6 +386,11 @@
     background: transparent;
     cursor: pointer;
     z-index: 5;
+    transition: transform 350ms linear;
+    &:hover,
+    &:focus {
+      transform: rotate(-180deg) scale(1.3);
+    }
   }
   @include desktop {
     top: 554px;
