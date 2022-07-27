@@ -1,9 +1,9 @@
 .advantages {
-  padding-top: 40px;
+  padding-top: 0;
   padding-bottom: 0;
-  @include tablet {
-    padding-top: 60px;
-  }
+  // @include tablet {
+  //   padding-top: 60px;
+  // }
   @include desktop {
     padding-bottom: 60px;
   }
@@ -54,7 +54,7 @@
   line-height: 1.14;
   letter-spacing: 0.04em;
   color: $title-text-color;
-  
+
   @media screen and (max-width: 767px) {
     text-transform: uppercase;
   }

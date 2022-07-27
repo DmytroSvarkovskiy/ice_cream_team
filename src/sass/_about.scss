@@ -2,7 +2,7 @@
   padding-bottom: 0;
   background-color: $background-color;
   background-repeat: no-repeat;
-  max-width: 100%;
+
   background-image: url('../images/about/about-mob1x-milk.png');
   background-size: 100%;
   background-position: top 590px left 0;
@@ -27,6 +27,9 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/about/about-desk3x-milk.png');
+    }
+    @media screen and(min-width: 1500px) {
+      background-position: top 110px left 0px;
     }
   }
 }
@@ -108,7 +111,14 @@
 }
 
 .about__content {
-  padding-bottom: 81px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    padding-bottom: 121px;
+  }
 }
 
 .about__after-title {
