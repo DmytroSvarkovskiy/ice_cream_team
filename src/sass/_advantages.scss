@@ -38,7 +38,7 @@
     margin-bottom: 20px;
   }
   @include tablet {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   @include desktop {
     margin-bottom: 40px;
@@ -54,6 +54,10 @@
   line-height: 1.14;
   letter-spacing: 0.04em;
   color: $title-text-color;
+  
+  @media screen and (max-width: 767px) {
+    text-transform: uppercase;
+  }
 
   @include mobile {
     font-size: 60px;
@@ -72,8 +76,6 @@
 .advantages-list__text {
   max-width: 230px;
 
-  font-family: 'DM Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 170%;
@@ -93,5 +95,6 @@
     max-width: 288px;
     font-size: 16px;
     line-height: 176%;
+    letter-spacing: 0.02em;
   }
 }
