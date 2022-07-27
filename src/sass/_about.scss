@@ -229,7 +229,7 @@
   transition: 0.3s all;
 }
 
-.modal {
+.about__modal {
   opacity: 0;
   visibility: hidden;
 
@@ -244,9 +244,7 @@
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
-}
 
-.about__modal {
   background-color: #e498b6;
   border-radius: 50% 20% / 10% 40%;
   width: 300px;
@@ -260,7 +258,8 @@
     width: 1000px;
   }
 }
-.modal.active,
+
+.about__modal.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
