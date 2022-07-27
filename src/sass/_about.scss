@@ -282,16 +282,16 @@
 
 .about__modal-content {
   background-color: #e498b6;
-  border-radius: 10px 5% / 20px 25em 30px 35em;
-  width: 300px;
+  border-radius: 1em/5em;
+  width: 250px;
   @include mobile {
-    width: 400px;
+    width: 410px;
   }
   @include tablet {
     width: 500px;
   }
   @include desktop {
-    width: 700px;
+    width: 600px;
   }
 }
 
@@ -312,8 +312,8 @@
 }
 
 .about__modal-content .about__modal-close {
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   fill: #9e052b;
   &:hover {
     fill: #f5f8f7;
