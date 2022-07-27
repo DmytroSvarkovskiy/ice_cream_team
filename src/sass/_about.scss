@@ -37,6 +37,9 @@
     display: flex;
     align-items: flex-start;
   }
+  @include desktop {
+    align-items: flex-end;
+  }
 }
 
 .about__pre-title {
@@ -143,6 +146,38 @@
   font-size: 12px;
   line-height: 1.58;
   color: $secondary-text-color;
+  margin-bottom: 10px;
+  min-width: 220px;
+  padding: 0 80px 0 0;
+  @include mobile {
+    font-size: 13px;
+    line-height: 1.68;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    max-width: 334px;
+    padding: 0;
+  }
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.78;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    max-width: 334px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.92;
+    letter-spacing: 0.04em;
+    margin-bottom: 27px;
+    max-width: 463px;
+  }
+}
+
+.about__text-after {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: $secondary-text-color;
   margin-bottom: 20px;
   min-width: 220px;
   padding: 0 80px 0 0;
@@ -158,14 +193,14 @@
     font-size: 14px;
     line-height: 1.78;
     letter-spacing: 0.04em;
-    margin-bottom: 37px;
+    margin-bottom: 40px;
     max-width: 334px;
   }
   @include desktop {
     font-size: 14px;
     line-height: 1.92;
     letter-spacing: 0.04em;
-    margin-bottom: 37px;
+    margin-bottom: 40px;
     max-width: 463px;
   }
 }
@@ -238,26 +273,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  // padding: 30px;
-  // border-radius: 3px;
-  background-color: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: transparent;
   transition: 0.3s all;
 }
 
 .about__modal-content {
   background-color: #e498b6;
-  border-radius: 50% 20% / 10% 40%;
+  border-radius: 10px 5% / 20px 25em 30px 35em;
   width: 300px;
   @include mobile {
     width: 400px;
   }
   @include tablet {
-    width: 600px;
+    width: 500px;
   }
   @include desktop {
-    width: 1000px;
+    width: 700px;
   }
 }
 
@@ -277,7 +311,7 @@
   cursor: pointer;
 }
 
-.about__modal-close {
+.about__modal-content .about__modal-close {
   top: 10px;
   right: 10px;
   fill: #9e052b;
@@ -288,21 +322,21 @@
 
 .about__modal-text {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.58;
   color: #f5f8f7;
   text-align: center;
   letter-spacing: 0.04em;
   @include mobile {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.68;
   }
   @include tablet {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.78;
   }
   @include desktop {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.8;
   }
 }
