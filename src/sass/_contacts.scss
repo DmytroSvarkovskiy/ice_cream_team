@@ -493,8 +493,8 @@
     margin-bottom: 15px;
   }
   @include desktop {
-    width: 400px;
-    height: 300px;
+    max-width: 400px;
+    max-height: 300px;
     margin-bottom: 15px;
   }
 }
@@ -837,6 +837,6 @@
 
   &:hover,
   &:focus {
-    fill: #61313d;
+    fill: $secondary-text-color-dark;
   }
 }
