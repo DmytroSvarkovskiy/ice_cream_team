@@ -413,6 +413,10 @@
   visibility: visible;
 }
 
+.modal-location.active {
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+}
+
 .modal-franchise.active,
 .overlay.active {
   opacity: 1;
@@ -463,20 +467,22 @@
   background: $background-color;
   width: 100%;
   max-width: 300px;
-  height: 100%;
-  overflow-y: auto;
+  height: 70%;
+  overflow-y: scroll;
 
-  transition: all 0.8s ease 0s;
+  transition: all 250ms ease 0s;
 
   @include mobile {
     max-width: 400px;
+    height: 72%;
   }
   @include tablet {
-    max-width: 800px;
+    max-width: 700px;
+    height: 600px;
   }
   @include desktop {
-    max-width: 900px;
-    height: auto;
+    max-width: 1050px;
+    height: 370px;
   }
 }
 
@@ -488,17 +494,14 @@
   @include mobile {
     width: 300px;
     height: 200px;
-    margin-bottom: 5px;
   }
   @include tablet {
-    width: 340px;
-    height: 250px;
-    margin-bottom: 15px;
+    width: 300px;
+    height: 200px;
   }
   @include desktop {
-    max-width: 400px;
-    max-height: 300px;
-    margin-bottom: 15px;
+    width: 300px;
+    height: 200px;
   }
 }
 
@@ -507,7 +510,7 @@
 
   flex-direction: column;
 
-  min-height: 100%;
+  // min-height: 100%;
   transition: all 0.8s ease 0s;
 }
 
@@ -586,6 +589,10 @@
 // ----------------   franchise  Modal
 //
 
+.modal-franchise.active {
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+}
+
 .modal-franchise {
   opacity: 0;
   visibility: hidden;
@@ -604,21 +611,23 @@
   transition: 0.3s all;
 
   background: $background-color;
-  height: 80%;
+  height: 530px;
   width: 80vw;
   overflow-y: scroll;
 
-  transition: all 0.6s ease 0s;
+  transition: all 250ms ease 0s;
 
   @include mobile {
-    max-width: 360px;
+    width: 360px;
+    height: 530px;
   }
   @include tablet {
-    max-width: 400px;
+    width: 400px;
+    height: 620px;
   }
   @include desktop {
-    height: auto;
-    max-width: 500px;
+    height: 680px;
+    width: 500px;
   }
 }
 
@@ -626,51 +635,65 @@
   display: flex;
 
   flex-direction: column;
+  align-items: center;
 
   min-height: 100%;
   transition: all 0.8s ease 0s;
 }
 
 .franchise__modal-form {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .franchise__title {
   font-family: 'Titan One';
   text-align: center;
+  justify-content: center;
   text-transform: uppercase;
 
   color: $pre-title-color;
   margin-top: 10px;
   margin-bottom: 10px;
+  max-width: 200px;
 
-  @include font(400, 20px, 1.1, null);
+  @include font(400, 16px, 1.1, null);
 
   @include mobile {
-    @include font(400, 20px, 1.1, null);
+    @include font(400, 18px, 1.1, null);
+    max-width: 300px;
   }
   @include tablet {
     @include font(400, 26px, 1.1, null);
+    max-width: 340px;
   }
   @include desktop {
     @include font(400, 30px, 1.1, null);
+    max-width: 440px;
   }
 }
 
 .franchise__after-title {
   color: $title-text-color;
   margin-bottom: 10px;
+  max-width: 200px;
 
   @include font(500, 14px, 1.5, null);
 
   @include mobile {
     @include font(500, 14px, 1.6, null);
+    max-width: 300px;
   }
   @include tablet {
     @include font(500, 16px, 1.6, null);
+    max-width: 340px;
   }
   @include desktop {
     @include font(500, 18px, 1.8, null);
+    max-width: 440px;
   }
 }
 
@@ -728,6 +751,7 @@
 
 .franchise__modal-fields {
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .franchise__modal-form .franchise__modal-comment {
