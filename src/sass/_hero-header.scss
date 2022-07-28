@@ -105,6 +105,9 @@
 .header-nav__item:hover {
   transform: scale(1.15);
 }
+.current {
+  color: $title-text-color;
+}
 .header-top__btn {
   display: none;
   @include tablet {
@@ -620,14 +623,18 @@
   right: 8px;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+  border: none;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   fill: $text-color;
+}
+
+.button-icon-close:hover {
+  fill: $title-text-color;
+  transform: rotate(360deg);
 }
 
 .button-icon {
