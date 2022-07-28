@@ -24,7 +24,9 @@
         </a>
         <ul class="header-nav__list list">
           <li class="header-nav__item">
-            <a class="header-nav__link link" href="#hero-header">Home</a>
+            <a class="header-nav__link link current" href="#hero-header"
+              >Home</a
+            >
           </li>
           <li class="header-nav__item">
             <a class="header-nav__link link" href="#about">About us</a>
@@ -195,8 +197,14 @@
   </div>
   <div class="window-modal modal" data-modal="7">
     <button type="button" class="data-modal-close js-modal-close">
-      <svg class="button-icon" width="14" height="14">
-        <use href="./images/symbol-modal.svg#icon-close-black"></use>
+      <svg
+        class="button-icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+        />
       </svg>
     </button>
     <p class="modal-title">Leave your details, we will call you back</p>
