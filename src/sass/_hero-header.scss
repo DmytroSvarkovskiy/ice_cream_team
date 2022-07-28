@@ -619,29 +619,17 @@
 
 .data-modal-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   fill: $text-color;
-}
-
-.button-icon-close:hover {
-  fill: $title-text-color;
-  transform: rotate(360deg);
-}
-
-.button-icon {
-  transition: fill 250ms linear;
-  .data-modal-close:hover &,
-  .data-modal-close:focus & {
+  transition: fill 250ms linear, transform 250ms linear;
+  &:hover,
+  &:focus {
     fill: $title-text-color;
+    transform: rotate(360deg);
   }
 }
 
