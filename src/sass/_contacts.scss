@@ -467,22 +467,22 @@
   background: $background-color;
   width: 100%;
   max-width: 300px;
-  height: 70%;
+  height: 80%;
   overflow-y: scroll;
 
   transition: all 250ms ease 0s;
 
   @include mobile {
     max-width: 400px;
-    height: 72%;
+    max-height: 600px;
   }
   @include tablet {
     max-width: 700px;
-    height: 600px;
+    max-height: 600px;
   }
   @include desktop {
     max-width: 1050px;
-    height: 370px;
+    max-height: 370px;
   }
 }
 
@@ -611,7 +611,8 @@
   transition: 0.3s all;
 
   background: $background-color;
-  height: 530px;
+  max-height: 530px;
+  height: 90%;
   width: 80vw;
   overflow-y: scroll;
 
@@ -619,15 +620,15 @@
 
   @include mobile {
     width: 360px;
-    height: 530px;
+    max-height: 530px;
   }
   @include tablet {
     width: 400px;
-    height: 620px;
+    max-height: 620px;
   }
   @include desktop {
-    height: 680px;
-    width: 500px;
+    height: 90%;
+    max-height: 680px;
   }
 }
 
